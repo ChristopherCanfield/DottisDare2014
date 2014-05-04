@@ -3,6 +3,64 @@
  */
 
 
-body {
-	background-color: #08684E;
+h1 {
+	color: #ffffff;
+	text-align: center;
+	font-family: Arial, Tahoma, Helvetica, sans-serif;
+	padding-top: 2em;
 }
+
+h4 {
+	color: #ffffff;
+	text-align: left;
+	font-family: Arial, Tahoma, Helvetica, sans-serif;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+form {
+	background-color: #0C9B74;	
+}
+
+.signinform {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 450px;
+	
+	border: 3px solid;
+	border-color: #5FF39B;
+	border-radius: 25px;
+	padding: 40px;
+}
+
+.signinform > input {
+	border: 2px solid;
+	border-color: #08684E;
+	border-radius: 8px;
+	
+	width: 250px;
+	
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.signinform > .form-control:focus {
+	border-color: #5FF39B;
+}
+
+.signinform > button {
+	margin-left: 59px;
+	background-color: #08684E;
+	border-color: #5FF39B;
+}
+
+.signinform > button:hover, 
+.signinform > button:focus {
+	color: #08684E;
+	background-color: #5FF39B;
+	border-color: #08684E;
+}
+
