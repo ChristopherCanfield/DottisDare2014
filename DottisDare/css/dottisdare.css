@@ -3,11 +3,19 @@
  */
 
 
-h1 {
+h1.title {
+	width: 100%;
+	min-width: 450px;
 	color: #ffffff;
 	text-align: center;
 	font-family: Arial, Tahoma, Helvetica, sans-serif;
 	padding-top: 2em;
+}
+
+@media (max-width: 500px) {
+	h1.title {
+		font-size: 30px;
+	}
 }
 
 h4 {
@@ -20,12 +28,11 @@ h4 {
 
 form {
 	background-color: #0C9B74;	
-}
 
-.signinform {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	width: 450px;
 	
 	border: 3px solid;
