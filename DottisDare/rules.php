@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=device-width initial-scale=0.75">
-    <meta name="description" content="Dotti's Dare 2014 scavenger hunt rules" />
+    <meta name="description" content="Dotti's Dare Scavenger Hunt Rules" />
 	<meta name="author" content="Christopher D. Canfield" />
     
     <title>Dotti's Dare - Rules</title>

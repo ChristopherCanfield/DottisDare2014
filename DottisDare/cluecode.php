@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=device-width initial-scale=0.75">
-    <meta name="description" content="Dotti's Dare Login Page" />
+    <meta name="description" content="Dotti's Dare Clue Code" />
 	<meta name="author" content="Christopher D. Canfield" />
     
-    <title>Dotti's Dare</title>
+    <title>Dotti's Dare - Clue Code</title>
 
     <!-- css -->
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -32,14 +32,13 @@
     </h1>
     
     <div class="container">
-      <form class="form-signin signinform" role="form">
+      <form class="form-signin cluecode" role="form">
         <h4 class="form-signin-heading">
-        	Please enter your troop number to continue.<br>
-        	Ex. TR1234
+        	Enter the 3-digit code found on the back of your clue:
         </h4>
         
         <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
-        <button class="btn btn-lg btn-primary dottisdare" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary dottisdare" type="submit">Submit Clue Code</button>
       </form>
     </div> <!-- /container -->
     
