@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=device-width initial-scale=0.75">
-    <meta name="description" content="Dotti's Dare Clue Code" />
+    <meta name="description" content="Dotti's Dare Camp Map" />
 	<meta name="author" content="Christopher D. Canfield" />
     
-    <title>Dotti's Dare - Clue Code</title>
+    <title>Dotti's Dare - Camp Map</title>
 
     <!-- css -->
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -26,6 +26,11 @@
     <![endif]-->
   </head>
   <body>
+    <h1 class="title">
+    	Welcome to the Dotti's Dare<br>
+    	2014 Scavenger Hunt!
+    </h1>
+    
     <div class="container">
       <form class="form-signin cluecode" role="form">
         <h4 class="form-signin-heading">
