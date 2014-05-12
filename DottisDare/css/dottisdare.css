@@ -9,7 +9,7 @@ h1.title {
 	color: #ffffff;
 	text-align: center;
 	font-family: Arial, Tahoma, Helvetica, sans-serif;
-	padding-top: 2em;
+	padding-top: 1em;
 }
 
 @media (max-width: 500px) {
@@ -26,6 +26,12 @@ h4 {
 	margin-top: 0;
 }
 
+body {
+	font-family: Tahoma, Helvetica, sans-serif;
+	font-size: 1.65em;
+	color: #ffffff;
+}
+
 form {
 	background-color: #0C9B74;	
 
@@ -33,12 +39,46 @@ form {
 	margin-right: auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	width: 450px;
 	
 	border: 3px solid;
 	border-color: #5FF39B;
 	border-radius: 25px;
 	padding: 40px;
+}
+
+button.dottisdare {
+	background-color: #08684E;
+	border-color: #5FF39B;
+}
+
+button.dottisdare:hover, 
+button.dottisdare:focus {
+	color: #08684E;
+	background-color: #5FF39B;
+	border-color: #08684E;
+}
+
+li {
+	color: #ffffff;
+	padding-bottom: 10px;
+}
+
+div.centered {
+	text-align: center;
+}
+
+footer {
+	font-size: 0.65em;
+	text-align: center;
+}
+
+
+/******************/
+/** Sign-in page **/
+/******************/
+
+form.signinform {
+	width: 450px;
 }
 
 .signinform > input {
@@ -60,14 +100,36 @@ form {
 
 .signinform > button {
 	margin-left: 59px;
-	background-color: #08684E;
+}
+
+
+/******************/
+/** Rules page **/
+/******************/
+
+div.rules {
+	background-color: #0C9B74;	
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	border: 3px solid;
 	border-color: #5FF39B;
+	border-radius: 25px;
+	padding: 20px;
+	
+	min-width: 500px;
+	max-width: 700px;
 }
 
-.signinform > button:hover, 
-.signinform > button:focus {
-	color: #08684E;
-	background-color: #5FF39B;
-	border-color: #08684E;
+h3.rules {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
+button.rules {
+	margin-top: 30px;
+}

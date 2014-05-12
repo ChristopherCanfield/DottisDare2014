@@ -39,13 +39,16 @@
         </h4>
         
         <input type="text" class="form-control" placeholder="" required autofocus>
-        <button class="btn btn-lg btn-primary " type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary dottisdare" type="submit">Sign in</button>
       </form>
     </div> <!-- /container -->
     
+    <footer>
+    	&copy; 2014 Christopher D. Canfield | Caitlin F. Canfield
+    </footer>
+    
 	<?php
 		echo $_SESSION['test'];
-		echo 'test';
 	?>
 
     <!-- jQuery -->
