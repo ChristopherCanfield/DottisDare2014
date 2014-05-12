@@ -1,3 +1,7 @@
+<?php
+	require_once('server/session.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,6 +43,10 @@
       </form>
     </div> <!-- /container -->
     
+	<?php
+		echo $_SESSION['test'];
+		echo 'test';
+	?>
 
     <!-- jQuery -->
     <script src="lib/jquery/jquery-1.11.1.min.js"></script>
