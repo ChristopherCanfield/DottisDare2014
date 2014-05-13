@@ -9,8 +9,8 @@
 						<p>Dotti led a Pilot troop of five-year-olds to help gather information before implementation of the Daisy program.</p>	
 					</div>
 					
-					<img src="images/clues/SpeedLimit875.jpg" alt="Birdhouse at Conestoga" 
-							height="255" width="235" class="img-rounded" />
+					<img src="images/clues/875.jpg" alt="Speed Limit Sign by Dining Hall" 
+							width="161" height="314" class="img-rounded" />
 					
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary"></button>
