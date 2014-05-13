@@ -33,7 +33,16 @@
         	TEST TEST TEST TEST TEST
         </h4>
 
+		<?php include 'server/clues/clue173.php'; ?>
 		<?php include 'server/clues/clue178.php'; ?>
+		<?php include 'server/clues/clue217.php'; ?>
+		<?php include 'server/clues/clue218.php'; ?>
+		<?php include 'server/clues/clue249.php'; ?>
+		<?php include 'server/clues/clue267.php'; ?>
+		<?php include 'server/clues/clue472.php'; ?>
+		<?php include 'server/clues/clue514.php'; ?>
+		<?php include 'server/clues/clue542.php'; ?>
+		<?php include 'server/clues/clue874.php'; ?>
 		<?php include 'server/clues/clue875.php'; ?>
 		<?php include 'server/clues/clue925.php'; ?>
         
@@ -42,25 +51,25 @@
 		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" 
 		    		data-toggle="modal" href="#blueSquare" alt="Blue Square" />
 		    <area shape="poly" coords="687, 420, 736, 381, 806, 388, 799, 451, 718, 458" 
-		    		data-toggle="modal" href="#redTriangle" alt="Red Triangle" onclick="alert('Red Triangle');" />
+		    		data-toggle="modal" href="#redTriangle" alt="Red Triangle" />
 		    <area shape="rect" coords="592, 472, 694, 545" 
-		    		data-toggle="modal" href="#greenSquare" alt="Green Square" onclick="alert('Green Square');" />
+		    		data-toggle="modal" href="#greenSquare" alt="Green Square" />
 		    <area shape="rect" coords="725, 266, 823, 342" 
-		    		data-toggle="modal" href="#greenCircle" alt="Green Triangle" onclick="alert('Green Triangle');" />
+		    		data-toggle="modal" href="#greenTriangle" alt="Green Triangle" />
 		    <area shape="poly" coords="575, 105, 698, 101, 697, 139, 638, 167, 582, 140" 
-		    		data-toggle="modal" href="#greenCircle" alt="Green Circle" onclick="alert('Green Circle');" />
+		    		data-toggle="modal" href="#greenCircle" alt="Green Circle" />
 		    <area shape="poly" coords="655, 91, 572, 94, 547, 45, 652, 35, 697, 55, 698, 90" 
-		    		data-toggle="modal" href="#purpleTriangle" alt="Purple Triangle" onclick="alert('Purple Triangle');" />
+		    		data-toggle="modal" href="#purpleTriangle" alt="Purple Triangle" />
 		    <area shape="rect" coords="610, 192, 684, 269" 
-		    		data-toggle="modal" href="#purpleSquare" alt="Purple Square" onclick="alert('Purple Square');" />
+		    		data-toggle="modal" href="#purpleSquare" alt="Purple Square" />
 		    <area shape="poly" coords="753, 136, 795, 203, 862, 195, 830, 136, 768, 115" 
-		    		data-toggle="modal" href="#redCircle" alt="Red Circle" onclick="alert('Red Circle');" />
+		    		data-toggle="modal" href="#redCircle" alt="Red Circle" />
 		    <area shape="poly" coords="781, 209, 764, 171, 732, 140, 701, 171, 729, 220" 
 		    		data-toggle="modal" href="#purpleCircle" alt="Purple Circle" />
 		    <area shape="rect" coords="484, 308, 571, 391" 
-		    		data-toggle="modal" href="#blueTriangle" alt="Blue Triangle" onclick="alert('Blue Triangle');" />
+		    		data-toggle="modal" href="#blueTriangle" alt="Blue Triangle" />
 		    <area shape="rect" coords="383, 224, 474, 332" 
-		    		data-toggle="modal" href="#redSquare" alt="Red Square" onclick="alert('Red Square');" />
+		    		data-toggle="modal" href="#redSquare" alt="Red Square" />
 		    <area shape="rect" coords="194, 220, 319, 325" 
 		    		data-toggle="modal" href="#blueCircle" alt="Blue Circle" />
 		</map>
