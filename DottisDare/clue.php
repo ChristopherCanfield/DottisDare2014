@@ -41,10 +41,6 @@
     	&copy; 2014 Christopher D. Canfield | Caitlin F. Canfield
     </footer>
     
-	<?php
-		echo $_SESSION['test'];
-	?>
-
     <!-- jQuery -->
     <script src="lib/jquery/jquery-1.11.1.min.js"></script>
     
