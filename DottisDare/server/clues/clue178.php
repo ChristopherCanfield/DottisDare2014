@@ -9,6 +9,9 @@
 						<p>Dotti became a leader of an intermediate troop.</p>	
 					</div>
 					
+					<img src="images/clues/SpeedLimit875.jpg" alt="Speed limit sign by dining hall" 
+							height="235" width="255" class="img-rounded" />
+					
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary"></button>
         				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
