@@ -30,7 +30,6 @@ body {
 	font-family: Tahoma, Helvetica, sans-serif;
 	font-size: 1.65em;
 	color: #ffffff;
-	/*background-image: url("../images/map_background.png");*/
 }
 
 form {
@@ -97,6 +96,14 @@ div.dottisdare {
 	border-color: #5FF39B;
 	border-radius: 25px;
 	padding: 20px;
+}
+
+.modal-backdrop {
+	background-color: #404040;
+}
+
+.modal-body, .modal-header, .modal-header > h4 {
+	color: #000000;
 }
 
 footer {

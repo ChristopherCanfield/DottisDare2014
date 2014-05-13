@@ -39,7 +39,7 @@
         </h4>
         
         <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
-        <button class="btn btn-lg btn-primary dottisdare" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary dottisdare" type="submit" data-loading-text="Loading...">Sign in</button>
       </form>
     </div> <!-- /container -->
     

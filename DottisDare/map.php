@@ -32,10 +32,13 @@
         <h4>
         	TEST TEST TEST TEST TEST
         </h4>
+
+		<?php include 'server/clues/clue178.php'; ?>
         
         <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />
 		<map name="map">
-		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" alt="Blue Square" onclick="alert('Blue Square');" />
+		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" 
+		    		alt="Blue Square" data-toggle="modal" href="#blueSquare" onclick="alert('Blue Square');" />
 		    <area shape="poly" coords="687, 420, 736, 381, 806, 388, 799, 451, 718, 458" alt="Red Triangle" onclick="alert('Red Triangle');" />
 		    <area shape="rect" coords="592, 472, 694, 545" alt="Green Square" onclick="alert('Green Square');" />
 		    <area shape="rect" coords="725, 266, 823, 342" alt="Green Triangle" onclick="alert('Green Triangle');" />
