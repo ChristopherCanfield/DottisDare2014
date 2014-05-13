@@ -32,13 +32,13 @@
     </h1>
     
     <div class="container">
-      <form class="form-signin signinform" role="form">
+      <form class="form-signin signinform" role="form" action="server/login.php" method="post">
         <h4 class="form-signin-heading">
         	Please enter your troop number to continue.<br>
         	Ex. TR1234
         </h4>
         
-        <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
+        <input type="text" class="form-control dottisdare" name="troop" placeholder="" required autofocus>
         <button class="btn btn-lg btn-primary dottisdare" type="submit" data-loading-text="Loading...">Sign in</button>
       </form>
     </div> <!-- /container -->
