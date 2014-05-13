@@ -26,20 +26,28 @@
     <![endif]-->
   </head>
   <body>
-    <h1 class="title">
-    	Welcome to the Dotti's Dare<br>
-    	2014 Scavenger Hunt!
-    </h1>
-    
+
     <div class="container">
-      <form class="form-signin cluecode" role="form">
-        <h4 class="form-signin-heading">
-        	Enter the 3-digit code found on the back of your clue:
+      <div class="dottisdare map centered">
+        <h4>
+        	TEST TEST TEST TEST TEST
         </h4>
         
-        <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
-        <button class="btn btn-lg btn-primary dottisdare" type="submit">Submit Clue Code</button>
-      </form>
+        <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />
+		<map name="map">
+		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" alt="Blue Square" onclick="alert('Blue Square');" />
+		    <area shape="poly" coords="687, 420, 736, 381, 806, 388, 799, 451, 718, 458" alt="Red Triangle" onclick="alert('Red Triangle');" />
+		    <area shape="rect" coords="592, 472, 694, 545" alt="Green Square" onclick="alert('Green Square');" />
+		    <area shape="rect" coords="725, 266, 823, 342" alt="Green Triangle" onclick="alert('Green Triangle');" />
+		    <area shape="poly" coords="575, 105, 698, 101, 697, 139, 638, 167, 582, 140" alt="Green Circle" onclick="alert('Green Circle');" />
+		    <area shape="poly" coords="655, 91, 572, 94, 547, 45, 652, 35, 697, 55, 698, 90" alt="Purple Triangle" onclick="alert('Purple Triangle');" />
+		    <area shape="rect" coords="610, 192, 684, 269" alt="Purple Square" onclick="alert('Purple Square');" />
+		    <area shape="poly" coords="753, 136, 795, 203, 862, 195, 830, 136, 768, 115" alt="Red Circle" onclick="alert('Red Circle');" />
+		    <area shape="poly" coords="781, 209, 764, 171, 732, 140, 701, 171, 729, 220" alt="Purple Circle" onclick="alert('Purple Circle');" />
+		    <area shape="rect" coords="484, 308, 571, 391" alt="Blue Triangle" onclick="alert('Blue Triangle');" />
+		    <area shape="rect" coords="383, 224, 474, 332" alt="Red Square" onclick="alert('Red Square');" />
+		    <area shape="rect" coords="194, 220, 319, 325" alt="Blue Circle" onclick="alert('Blue Circle');" />
+		</map>
     </div> <!-- /container -->
     
     <footer>

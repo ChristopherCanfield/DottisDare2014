@@ -85,6 +85,20 @@ div.centered {
 	text-align: center;
 }
 
+div.dottisdare {
+	background-color: #0C9B74;	
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	border: 3px solid;
+	border-color: #5FF39B;
+	border-radius: 25px;
+	padding: 20px;
+}
+
 footer {
 	font-size: 0.65em;
 	text-align: center;
@@ -105,23 +119,11 @@ form.signinform {
 }
 
 
-/******************/
+/****************/
 /** Rules page **/
-/******************/
+/****************/
 
-div.rules {
-	background-color: #0C9B74;	
-
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	
-	border: 3px solid;
-	border-color: #5FF39B;
-	border-radius: 25px;
-	padding: 20px;
-	
+div.rules {	
 	min-width: 500px;
 	max-width: 700px;
 }
@@ -137,9 +139,9 @@ button.rules {
 }
 
 
-/******************/
+/********************/
 /** Clue code page **/
-/******************/
+/********************/
 
 form.cluecode {
 	width: 450px;
@@ -147,4 +149,14 @@ form.cluecode {
 
 .cluecode > button {
 	margin-left: 59px;
+}
+
+
+/**************/
+/** Map page **/
+/**************/
+
+div.map {
+	width: 1012px;
+	margin: 10px;
 }
