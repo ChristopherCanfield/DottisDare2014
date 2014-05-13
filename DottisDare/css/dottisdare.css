@@ -102,8 +102,12 @@ div.dottisdare {
 	background-color: #404040;
 }
 
-.modal-body, .modal-header, .modal-header > h4 {
+.modal-body {
 	color: #000000;
+}
+
+.modal-header {
+	background-color: #08684E;
 }
 
 footer {
