@@ -40,7 +40,7 @@
         <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />
 		<map name="map">
 		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" 
-		    		data-toggle="modal" href="#blueSquare" alt="Blue Square" onclick="alert('Blue Square');" />
+		    		data-toggle="modal" href="#blueSquare" alt="Blue Square" />
 		    <area shape="poly" coords="687, 420, 736, 381, 806, 388, 799, 451, 718, 458" 
 		    		data-toggle="modal" href="#redTriangle" alt="Red Triangle" onclick="alert('Red Triangle');" />
 		    <area shape="rect" coords="592, 472, 694, 545" 
@@ -56,13 +56,13 @@
 		    <area shape="poly" coords="753, 136, 795, 203, 862, 195, 830, 136, 768, 115" 
 		    		data-toggle="modal" href="#redCircle" alt="Red Circle" onclick="alert('Red Circle');" />
 		    <area shape="poly" coords="781, 209, 764, 171, 732, 140, 701, 171, 729, 220" 
-		    		data-toggle="modal" href="#purpleCircle" alt="Purple Circle" onclick="alert('Purple Circle');" />
+		    		data-toggle="modal" href="#purpleCircle" alt="Purple Circle" />
 		    <area shape="rect" coords="484, 308, 571, 391" 
 		    		data-toggle="modal" href="#blueTriangle" alt="Blue Triangle" onclick="alert('Blue Triangle');" />
 		    <area shape="rect" coords="383, 224, 474, 332" 
 		    		data-toggle="modal" href="#redSquare" alt="Red Square" onclick="alert('Red Square');" />
 		    <area shape="rect" coords="194, 220, 319, 325" 
-		    		data-toggle="modal" href="#blueCircle" alt="Blue Circle" onclick="alert('Blue Circle');" />
+		    		data-toggle="modal" href="#blueCircle" alt="Blue Circle" />
 		</map>
     </div> <!-- /container -->
     
