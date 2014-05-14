@@ -15,6 +15,7 @@
     <title>Dotti's Dare</title>
 
     <!-- css -->
+    <link href="lib/jquery-ui/css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/dottisdare.css" rel="stylesheet">
 
@@ -62,5 +63,6 @@
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
   </body>
 </html>
