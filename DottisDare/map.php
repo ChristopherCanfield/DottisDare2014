@@ -83,6 +83,9 @@
 		    <area shape="rect" coords="194, 220, 319, 325" 
 		    		data-toggle="modal" href="#blueCircle" alt="Blue Circle" />
 		</map>
+		<div class="centered small" style="margin-top: 10px;">
+			Campground map &copy; 2014 Girl Scouts of Eastern Pennsylvania
+		</div>
     </div> <!-- /container -->
     
     <footer>
