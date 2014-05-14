@@ -2,7 +2,6 @@
 
 /**
  * The server environment.
- * Set this in /model/session.php
  */
 class Environment 
 {

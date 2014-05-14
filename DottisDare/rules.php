@@ -2,6 +2,7 @@
 	require_once('server/session.php');
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +32,16 @@
     </h1>
     
     <div class="container">  	
-  		<div class="rules">
+  		<div class="rules dottisdare">
+  			<?php 	
+		    	if (!empty($_GET['troopname']))
+				{
+					echo '<h3 class="rules">';
+					echo 'Welcome ' . $_GET['troopname'] . '!';
+					echo '</h3>';
+				}
+			?>
+  			
   			<h3 class="rules">
       			Your goal is to find the events from Dotti’s life that are hidden around camp, 
       			and place them in the order in which they happened 
@@ -61,7 +71,7 @@
 	      	</ul>
 	      	
 	      	<div class="centered">
-		      	<button class="btn btn-lg btn-primary dottisdare rules" type="submit">Ready to Play!</button>
+			    <a class="btn btn-lg btn-primary dottisdare rules" href="map.php">Ready to Play!</a>
 		    </div>
 	      </div>
 

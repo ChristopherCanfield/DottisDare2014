@@ -46,13 +46,16 @@ form {
 	padding: 40px;
 }
 
-button.dottisdare {
+button.dottisdare, 
+a.dottisdare {
 	background-color: #08684E;
 	border-color: #5FF39B;
 }
 
 button.dottisdare:hover, 
-button.dottisdare:focus {
+button.dottisdare:focus,
+a.dottisdare:hover,
+a.dottisdare:focus {
 	color: #08684E;
 	background-color: #5FF39B;
 	border-color: #08684E;
@@ -145,7 +148,7 @@ h3.rules {
     text-align: center;
 }
 
-button.rules {
+a.rules {
 	margin-top: 30px;
 }
 
