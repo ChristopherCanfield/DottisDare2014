@@ -15,38 +15,36 @@ class Database
 	}
 	
 	/**
-	 * connects to the database
-	 * @param PersonType $personType a PersonType constant
-	 * @return true if successful, or false if not 
+	 * Connects to the database.
+	 * @return true if successful, or false if not.
 	 */
 	public static function connect()
 	{
 		$environment = Environment::get();
 		if ($environment === Environment::local)
 		{
-			$dsn = 'mysql:host=localhost;dbname=restaurant';
+			$dsn = 'mysql:host=localhost;dbname=dottisdare';
 		}
 		else if ($environment === Environment::godaddy) 
 		{
 			$dsn = 'mysql:host=restaurant3vR8kL.db.9906660.hostedresource.com;dbname=restaurant3vR8kL';
 		}
 	    
-		$username = $this->getUserID();
-		$password = $this->getPassword($personType);
+		$username = 'troop';
+		$password = 'sIeRFCj97ttkbGS';
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-			
+		
 		try {
-			$this->db = new PDO($dsn, $username, $password, $options);
-			return $this->db;
+			self::$db = new PDO($dsn, $username, $password, $options);
+			return true;
 		} catch (PDOException $e) {
-			//TODO (cdc-2012-11-11): handle this error more effectively
-			return null;
+			return false;
 		}
 	}
 	
 	/**
-	 * identifies whether the database object is connected to the databse 
-	 * @return true if the database is connected, or false if not
+	 * Identifies whether the database object is connected to the database.
+	 * @return true if the database is connected, or false if not.
 	 */
 	public static function isConnected()
 	{
