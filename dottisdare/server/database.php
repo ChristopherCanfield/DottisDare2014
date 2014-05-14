@@ -1,6 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/server/model/environment.php');
-
+require('environment.php');
 
 
 /**
@@ -21,11 +20,11 @@ class Database
 	public static function connect()
 	{
 		$environment = Environment::get();
-		if ($environment === Environment::local)
+		if ($environment === Environment::LOCAL)
 		{
 			$dsn = 'mysql:host=localhost;dbname=dottisdare';
 		}
-		else if ($environment === Environment::godaddy) 
+		else if ($environment === Environment::SERVER) 
 		{
 			$dsn = 'mysql:host=restaurant3vR8kL.db.9906660.hostedresource.com;dbname=restaurant3vR8kL';
 		}
@@ -48,7 +47,7 @@ class Database
 	 */
 	public static function isConnected()
 	{
-		return !is_null($this->db);
+		return !is_null(self::$db);
 	}
 	
 	/**
@@ -58,14 +57,22 @@ class Database
 	 */
 	public static function getTroopName($troopId)
 	{
+		if (empty($troopId))
+		{
+			return null;
+		}
+		
 		if (!self::isConnected())
 		{
-			self::connect();
+			if (!self::connect())
+			{
+				throw new Exception('Unable to connect to database');
+			}
 		}
 
 		$db = self::$db;
 		
-		$sql = 'select Troop.troopName' 
+		$sql = 'select Troop.name' 
 			. ' from Troop'
 			. ' where Troop.troopId = :troopId;';
 		
@@ -77,7 +84,7 @@ class Database
 		$result = $query->fetch();
 		if (!is_null($result))
 		{
-			$name = $result['troopName'];
+			$name = $result['name'];
 		}
 		else
 		{

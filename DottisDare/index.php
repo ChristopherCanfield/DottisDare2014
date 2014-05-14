@@ -39,6 +39,16 @@
         </h4>
         
         <input type="text" class="form-control dottisdare" name="troop" placeholder="" required autofocus>
+        
+        <?php 	
+	    	if (isset($_GET['status']))
+			{
+				echo '<div style="color:#E80000;margin-bottom:30px;">';
+				echo 'Invalid troop number: ' . $_GET['troop'];
+				echo '</div>';
+			}
+		?>
+        
         <button class="btn btn-lg btn-primary dottisdare" type="submit" data-loading-text="Loading...">Sign in</button>
       </form>
     </div> <!-- /container -->

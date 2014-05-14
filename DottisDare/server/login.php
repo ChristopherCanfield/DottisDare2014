@@ -1,17 +1,23 @@
 <?php
-    require_once('server/session.php');
-	require_once('server/model/database.php');
+	require('database.php');
 	
 	$troop = isset($_POST['troop']) ? $_POST['troop'] : null;
 	if (is_null($troop))
 	{
-		// TODO: invalid troop id - do something
+		header('location: /dottisdare/index.php?status=invalid&troop=' . $troop);
+		exit;
 	}
 	
 	$troopName = Database::getTroopName($troop);
+	if (is_null($troopName))
+	{
+		header('location: /dottisdare/index.php?status=invalid&troop=' . $troop);
+		exit;
+	}
 	
-	$_SESSION['troop'] = $troopName;
+	$_SESSION['troop'] = $troop;
+	$_SESSION['troopName'] = $troopName;
 	
-	header('location: /restaurant/login/success.php?action=login');
+	header('location: /dottisdare/rules.php?troop=' . $troop);
 	exit;
 ?>
