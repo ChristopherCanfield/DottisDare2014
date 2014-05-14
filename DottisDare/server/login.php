@@ -7,5 +7,7 @@
 		// TODO: invalid troop id - do something
 	}
 	
+	$troopName = 
 	
+	$_SESSION['troop'] = $troopName;
 ?>

@@ -4,14 +4,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/server/model/environment.php');
 
 
 /**
- * Represents the restaurant's database.
- * Used to connect to the database
+ * The connection to the database.
  */
 class Database 
 {
-	private $db = null;
+	private static $db = null;
 		
-	public function __construct() 
+	private function __construct() 
 	{
 	}
 	
@@ -20,7 +19,7 @@ class Database
 	 * @param PersonType $personType a PersonType constant
 	 * @return true if successful, or false if not 
 	 */
-	public function connect($personType)
+	public static function connect()
 	{
 		$environment = Environment::get();
 		if ($environment === Environment::local)
@@ -31,9 +30,8 @@ class Database
 		{
 			$dsn = 'mysql:host=restaurant3vR8kL.db.9906660.hostedresource.com;dbname=restaurant3vR8kL';
 		}
-		//enable when using locahost; disable when using godaddy account
 	    
-		$username = $this->getUserID($personType);
+		$username = $this->getUserID();
 		$password = $this->getPassword($personType);
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 			
@@ -47,30 +45,49 @@ class Database
 	}
 	
 	/**
-	 * returns the connected database, or throws an exception if the db is not connected
-	 * @return the connected database, if successful
-	 */
-	public function get()
-	{
-		if (is_null($this->db)) {
-			throw new Exception('The db object is not connected. Call connect before using the db object.');
-		} else {
-			return $this->db;
-		}
-	}
-	
-	/**
 	 * identifies whether the database object is connected to the databse 
 	 * @return true if the database is connected, or false if not
 	 */
-	public function isConnected()
+	public static function isConnected()
 	{
 		return !is_null($this->db);
 	}
 	
-	public function getTroopData()
+	/**
+	 * Gets the troop name from the database, based on the provided troop id.
+	 * @param $troopId the troop id number.
+	 * @return the name of the troop, or null if no troop with the specified id exists.
+	 */
+	public static function getTroopName($troopId)
 	{
-		throw new Exception('Not yet implemented');	
+		if (!self::isConnected())
+		{
+			self::connect();
+		}
+
+		$db = self::$db;
+		
+		$sql = 'select Troop.troopName' 
+			. ' from Troop'
+			. ' where Troop.troopId = :troopId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+
+		$query->execute();
+		
+		$result = $query->fetch();
+		if (!is_null($result))
+		{
+			$name = $result['troopName'];
+		}
+		else
+		{
+			$name = null;
+		}
+		$query->closeCursor();
+		
+		return $name;
 	}
 }
 

@@ -1,5 +1,5 @@
 <?php
-    class TroopInfo
+    class Troop
 	{
 		private $troopId;
 		private $lastAccessed;
