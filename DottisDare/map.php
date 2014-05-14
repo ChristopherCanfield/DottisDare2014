@@ -27,11 +27,20 @@
   </head>
   <body>
 
+	<h1 class="title">
+    	Dotti's Dare 2014 Map &amp; Timeline
+    </h1>
+
     <div class="container">
-      <div class="dottisdare map centered">
-        <h4>
-        	TEST TEST TEST TEST TEST
-        </h4>
+      <div class="map dottisdare centered">
+        <?php 	
+		    	if (!empty($_GET['troopname']))
+				{
+					echo '<h3 class="map">';
+					echo $_GET['troopname'];
+					echo '</h3>';
+				}
+			?>
 
 		<?php include 'server/clues/clue173.php'; ?>
 		<?php include 'server/clues/clue178.php'; ?>

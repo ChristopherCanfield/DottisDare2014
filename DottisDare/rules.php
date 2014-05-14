@@ -71,7 +71,10 @@
 	      	</ul>
 	      	
 	      	<div class="centered">
-			    <a class="btn btn-lg btn-primary dottisdare rules" href="map.php">Ready to Play!</a>
+	      		<?php
+	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troopname=' . $_GET['troopname'] 
+	      					. '">Ready to Play!</a>';
+				?>
 		    </div>
 	      </div>
 

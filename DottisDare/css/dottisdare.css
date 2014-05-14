@@ -142,7 +142,7 @@ div.rules {
 	max-width: 700px;
 }
 
-h3.rules {
+h3.rules, h3.map {
     margin-top: 10px;
     margin-bottom: 40px;
     text-align: center;
@@ -172,5 +172,4 @@ form.cluecode {
 
 div.map {
 	width: 1012px;
-	margin: 10px;
 }
