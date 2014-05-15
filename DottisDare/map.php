@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	
+	if (empty($_GET['troopname']))
+	{
+		header('location: /dottisdare/index.php');
+	}
 ?>
 
 <!DOCTYPE html>
