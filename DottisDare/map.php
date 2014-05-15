@@ -47,19 +47,28 @@
 				echo '</h3>';
 			}
 		?>
+		
+		<div class="centered">
+			<a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline" alt="Timeline">
+				Timeline
+			</a>
+	    </div>
 
-		<?php include 'server/clues/clue173.php'; ?>
-		<?php include 'server/clues/clue178.php'; ?>
-		<?php include 'server/clues/clue217.php'; ?>
-		<?php include 'server/clues/clue218.php'; ?>
-		<?php include 'server/clues/clue249.php'; ?>
-		<?php include 'server/clues/clue267.php'; ?>
-		<?php include 'server/clues/clue472.php'; ?>
-		<?php include 'server/clues/clue514.php'; ?>
-		<?php include 'server/clues/clue542.php'; ?>
-		<?php include 'server/clues/clue874.php'; ?>
-		<?php include 'server/clues/clue875.php'; ?>
-		<?php include 'server/clues/clue925.php'; ?>
+		<?php 
+			include 'server/clues/clue173.php';
+			include 'server/clues/clue178.php';
+			include 'server/clues/clue217.php';
+			include 'server/clues/clue218.php';
+			include 'server/clues/clue249.php';
+			include 'server/clues/clue267.php';
+			include 'server/clues/clue472.php';
+			include 'server/clues/clue514.php';
+			include 'server/clues/clue542.php';
+			include 'server/clues/clue874.php';
+			include 'server/clues/clue875.php';
+			include 'server/clues/clue925.php';
+			include 'server/timeline.php';
+		?>
         
         <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />
 		<map name="map">
@@ -103,5 +112,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+    
+    <script>
+		$(function() {
+			$( "#sortable" ).sortable();
+			$( "#sortable" ).disableSelection();
+		});
+	</script>
   </body>
 </html>

@@ -173,3 +173,9 @@ form.cluecode {
 div.map {
 	width: 1012px;
 }
+
+a.map {
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
