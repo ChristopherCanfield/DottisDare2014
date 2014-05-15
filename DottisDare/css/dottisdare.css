@@ -182,6 +182,19 @@ h3.clue {
 	margin: 0px;
 }
 
+.clue-success {
+	margin-top: 15px;
+	margin-bottom: 25px;
+	visibility:hidden;
+}
+
+.clue-invalid {
+	color: #E80000;
+	visibility: hidden;
+	margin-top: 15px;
+}
+
+
 /**************/
 /** Map page **/
 /**************/

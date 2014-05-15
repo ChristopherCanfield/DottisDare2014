@@ -6,17 +6,20 @@
 							Clue Code
 						</h3>
 						
-						<form class="form-signin cluecode" role="form">
+						<form class="form-signin cluecode" role="form" 
+								onsubmit="validateClue(173);return false;">
 							<img src="images/clues/173.jpg" alt="Pool House" 
 									width="314" height="215" class="img-rounded modal-image-clue" />
+							<h4 id="clue173" class="clue-success">Test TEST</h4>
 							
-					        <h4 class="form-signin-heading">
+					        <h4 id="submitText173" class="form-signin-heading">
 					        	Enter the 3-digit code found on the back of your clue:
 					        </h4>
 					        
-					        <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
-					        <button class="btn btn-lg btn-primary dottisdare" type="submit">Submit Clue Code</button>
+					        <input type="text" id="input173" class="form-control dottisdare" placeholder="" required autofocus>
+					        <button class="btn btn-lg btn-primary dottisdare" type="submit" id="submit173">Submit Clue Code</button>
 					        <button type="button" class="btn btn-lg dottisdare" data-dismiss="modal">Close</button>
+					        <h4 id="incorrect173" class="clue-invalid">Incorrect clue code.</h4>
 					      </form>
 					</div>
 				</div>

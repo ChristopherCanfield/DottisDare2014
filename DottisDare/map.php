@@ -130,5 +130,7 @@
 			$( "#sortable" ).disableSelection();
 		});
 	</script>
+	
+	<script src="js/Clue.js"></script>
   </body>
 </html>
