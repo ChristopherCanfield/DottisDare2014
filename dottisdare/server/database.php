@@ -17,7 +17,7 @@ class Database
 	 * Connects to the database.
 	 * @return true if successful, or false if not.
 	 */
-	public static function connect()
+	private static function connect()
 	{
 		$environment = Environment::get();
 		if ($environment === Environment::LOCAL)
@@ -26,10 +26,10 @@ class Database
 		}
 		else if ($environment === Environment::SERVER) 
 		{
-			$dsn = 'mysql:host=restaurant3vR8kL.db.9906660.hostedresource.com;dbname=restaurant3vR8kL';
+			$dsn = 'mysql:host=localhost;dbname=qgtlbkzc_dottisdare';
 		}
-	    
-		$username = 'troop';
+		
+		$username = 'qgtlbkzc_troop';
 		$password = 'sIeRFCj97ttkbGS';
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 		
@@ -45,7 +45,7 @@ class Database
 	 * Identifies whether the database object is connected to the database.
 	 * @return true if the database is connected, or false if not.
 	 */
-	public static function isConnected()
+	private static function isConnected()
 	{
 		return !is_null(self::$db);
 	}

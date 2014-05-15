@@ -3,7 +3,9 @@
 	
 	if (empty($_GET['troopname']))
 	{
-		header('location: /dottisdare/index.php');
+		require('server/environment.php');
+		$pathStart = (Environment::get() == Environment::LOCAL) ? '/dottisdare' : '';
+		header('location: ' . $pathStart . '/index.php');
 	}
 ?>
 
