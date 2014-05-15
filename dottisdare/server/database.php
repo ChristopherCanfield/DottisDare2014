@@ -171,7 +171,7 @@ class Database
 		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
 		
 		$query->execute();
-		$result = $query->fetch();
+		$result = $query->fetchColumn();
 		if (!is_null($result))
 		{
 			$exists = ($result > 0);

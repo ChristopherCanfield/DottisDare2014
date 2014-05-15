@@ -16,7 +16,7 @@
 						
 						<ul id="sortable">
 							<?php 
-							foreach ($clues as $clue)
+							foreach ($clues as $clue => $timeline)
 							{
 								if ($clue == 173)
 								{
