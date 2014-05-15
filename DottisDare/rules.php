@@ -1,5 +1,10 @@
 <?php
-	require_once('server/session.php');
+	session_start();
+
+	if (!isset($_SESSION['troop']) || !isset($_SESSION['troopname']))
+	{
+		header('location: /dottisdare/index.php');
+	}
 ?>
 
 
@@ -35,10 +40,10 @@
     <div class="container">  	
   		<div class="rules dottisdare">
   			<?php 	
-		    	if (!empty($_GET['troopname']))
+		    	if (isset($_SESSION['troopname']))
 				{
 					echo '<h3 class="rules">';
-					echo 'Welcome ' . $_GET['troopname'] . '!';
+					echo 'Welcome ' . $_SESSION['troopname'] . '!';
 					echo '</h3>';
 				}
 			?>

@@ -1,5 +1,5 @@
 <?php
-	require_once('server/session.php');
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +35,13 @@
     <div class="container">
       <div class="map dottisdare centered">
         <?php 	
-		    	if (!empty($_GET['troopname']))
-				{
-					echo '<h3 class="map">';
-					echo $_GET['troopname'];
-					echo '</h3>';
-				}
-			?>
+	    	if (!empty($_GET['troopname']))
+			{
+				echo '<h3 class="map">';
+				echo $_GET['troopname'];
+				echo '</h3>';
+			}
+		?>
 
 		<?php include 'server/clues/clue173.php'; ?>
 		<?php include 'server/clues/clue178.php'; ?>
