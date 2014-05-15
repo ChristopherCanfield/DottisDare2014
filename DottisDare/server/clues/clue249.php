@@ -8,7 +8,7 @@
 						
 						<form class="form-signin cluecode" role="form">
 							<img src="images/clues/249.jpg" alt="Shenango Sign" 
-									width="235" height="245" class="img-rounded" />
+									width="235" height="245" class="img-rounded modal-image-clue" />
 							
 					        <h4 class="form-signin-heading">
 					        	Enter the 3-digit code found on the back of your clue:

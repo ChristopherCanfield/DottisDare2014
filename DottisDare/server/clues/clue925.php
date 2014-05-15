@@ -8,7 +8,7 @@
 						
 						<form class="form-signin cluecode" role="form">
 							<img src="images/clues/925.jpg" alt="Eagle Bridge" 
-									width="314" height="201" class="img-rounded" />
+									width="314" height="201" class="img-rounded modal-image-clue" />
 							
 					        <h4 class="form-signin-heading">
 					        	Enter the 3-digit code found on the back of your clue:

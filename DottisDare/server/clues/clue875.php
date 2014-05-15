@@ -8,7 +8,7 @@
 						
 						<form class="form-signin cluecode" role="form">
 							<img src="images/clues/875.jpg" alt="Speed Limit Sign by Dining Hall" 
-									width="161" height="314" class="img-rounded" />
+									width="161" height="314" class="img-rounded modal-image-clue" />
 							
 					        <h4 class="form-signin-heading">
 					        	Enter the 3-digit code found on the back of your clue:
