@@ -19,6 +19,11 @@ class Database
 	 */
 	private static function connect()
 	{
+		if (self::isConnected())
+		{
+			return;
+		}
+		
 		$environment = Environment::get();
 		if ($environment === Environment::LOCAL)
 		{
@@ -62,14 +67,10 @@ class Database
 			return null;
 		}
 		
-		if (!self::isConnected())
+		if (!self::connect())
 		{
-			if (!self::connect())
-			{
-				throw new Exception('Unable to connect to database');
-			}
+			throw new Exception('Unable to connect to database');
 		}
-
 		$db = self::$db;
 		
 		$sql = 'select Troop.name' 
@@ -103,14 +104,10 @@ class Database
 	 */
 	public static function setClueTimelineOrder($troopId, $clueId, $timelineNumber)
 	{
-		if (!self::isConnected())
+		if (!self::connect())
 		{
-			if (!self::connect())
-			{
-				throw new Exception('Unable to connect to database');
-			}
+			throw new Exception('Unable to connect to database');
 		}
-		
 		$db = self::$db;
 			
 		$sql = 'update Timeline set timelineNumber = :timelineNumber ' .
@@ -123,6 +120,87 @@ class Database
 		
 		$query->execute();
 		$query->closeCursor();
+	}
+	
+	/**
+	 * Adds a clue for the specified troop.
+	 * @param $troopId the troop to add the clue to.
+	 * @param $clueId the id of the clue to add.
+	 */
+	public static function addClue($troopId, $clueId)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$clueCount = self::getClueCount($troopId);
+		
+		$sql = 'insert into Timeline ' .
+				' (clueId, troopId, timelineNumber)' .
+				' values (:clueId, :troopId, :timelineNumber);';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
+		$query->bindValue(':timelineNumber', $clueCount);
+	}
+
+	private static function getClueCount($troopId)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$sql = 'select count(*) from Timeline;';
+		
+		$query = $db->prepare($sql);
+		$query->execute();
+		
+		$result = $query->fetch();
+		return $result;
+	}
+	
+	/**
+	 * Gets all clues for the specified troop id.
+	 * @param $troopId the id of the troop to return the clues for.
+	 * @return a map of all clues for the specified troop. key: clue id; value: timeline number.
+	 */
+	public static function getClues($troopId)
+	{
+		if (empty($troopId))
+		{
+			return null;
+		}
+		
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$sql = 'select Timeline.clueId, Timeline.timelineNumber' 
+			. ' from Timeline'
+			. ' where Timeline.troopId = :troopId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+
+		$query->execute();
+		
+		$clues = array();
+		$result = $query->fetch();
+		while ($result != null) 
+		{
+			$clues[$result['clueId']] = $result['timelineNumber'];
+			$result = $query->fetch();
+		}
+		$query->closeCursor();
+		
+		return $clues;
 	}
 }
 
