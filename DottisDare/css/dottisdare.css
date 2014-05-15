@@ -161,10 +161,26 @@ form.cluecode {
 	width: 450px;
 }
 
-.cluecode > button {
+/*.cluecode > button {
 	margin-left: 59px;
+}*/
+
+.modal-dialog-clue {
+	width: 500px;
 }
 
+.modal-body-clue {
+	background-color: #08684E;
+}
+
+.modal-image-clue {
+	margin-bottom: 10px;
+}
+
+h3.clue {
+	color: #ffffff;
+	margin: 0px;
+}
 
 /**************/
 /** Map page **/

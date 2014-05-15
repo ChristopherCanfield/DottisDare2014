@@ -1,21 +1,24 @@
 		<div class="modal fade" id="redCircle" tabindex="-1" role="dialog" aria-labelledby="Red Circle" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">Clue</h4>
+			<div class="modal-dialog modal-dialog-clue">
+				<div class="modal-content">					
+					<div class="modal-body modal-body-clue">
+						<h3 class="clue">
+							Clue Code
+						</h3>
+						
+						<form class="form-signin cluecode" role="form">
+							<img src="images/clues/542.jpg" alt="Stone Bridge at Conestoga" 
+									width="314" height="200" class="img-rounded" />
+							
+					        <h4 class="form-signin-heading">
+					        	Enter the 3-digit code found on the back of your clue:
+					        </h4>
+					        
+					        <input type="text" class="form-control dottisdare" placeholder="" required autofocus>
+					        <button class="btn btn-lg btn-primary dottisdare" type="submit">Submit Clue Code</button>
+					        <button type="button" class="btn btn-lg dottisdare" data-dismiss="modal">Close</button>
+					      </form>
 					</div>
-					
-					<div class="modal-body">
-						<p>Dotti began traveling to Appalachia each summer to help build and repair homes for the poor.</p>	
-					</div>
-					
-					<img src="images/clues/542.jpg" alt="Stone Bridge at Conestoga" 
-							width="314" height="200" class="img-rounded" />
-					
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary"></button>
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      				</div>
 				</div>
 			</div>
 		</div>
