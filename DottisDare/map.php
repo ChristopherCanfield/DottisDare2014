@@ -39,13 +39,10 @@
 
     <div class="container">
       <div class="map dottisdare centered">
-        <?php 	
-	    	if (!empty($_GET['troopname']))
-			{
-				echo '<h3 class="map">';
-				echo $_GET['troopname'];
-				echo '</h3>';
-			}
+        <?php
+			echo '<h3 class="map">';
+			echo $_GET['troopname'];
+			echo '</h3>';
 		?>
 		
 		<div class="centered">
@@ -115,7 +112,19 @@
     
     <script>
 		$(function() {
-			$( "#sortable" ).sortable();
+			$('#sortable').sortable({
+			    axis: 'y',
+			    update: function (event, ui) {
+			        var timelineData = $(this).sortable('serialize');
+
+			        $.ajax({
+			            data: timelineData + '&troop=' <?php $_GET['troop'] ?> ,
+			            type: 'POST',
+			            url: 'server/processTimeline.php'
+			        });
+			    }
+			});
+			
 			$( "#sortable" ).disableSelection();
 		});
 	</script>

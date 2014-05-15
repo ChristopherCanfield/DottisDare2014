@@ -94,7 +94,36 @@ class Database
 		
 		return $name;
 	}
-}
+	
+	/**
+	 * Sets the clue's timeline order number.
+	 * @param $troopId the troop's id.
+	 * @param $clueId the clue's numeric id.
+	 * @param $timelineNumber the clue's order in the timeline.
+	 */
+	public static function setClueTimelineOrder($troopId, $clueId, $timelineNumber)
+	{
+		if (!self::isConnected())
+		{
+			if (!self::connect())
+			{
+				throw new Exception('Unable to connect to database');
+			}
+		}
+		
+		$db = self::$db;
+			
+		$sql = 'update Timeline set timelineNumber = :timelineNumber ' .
+				'where troopId = :troopId and clueId = :clueId;';
 
+		$query = $db->prepare($sql);
+		$query->bindValue(':timelineNumber', $timelineNumber, PDO::PARAM_INT);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
+		
+		$query->execute();
+		$query->closeCursor();
+	}
+}
 
 ?>

@@ -75,7 +75,7 @@
 	      	
 	      	<div class="centered">
 	      		<?php
-	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troopname=' . $_GET['troopname'] 
+	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troop=' . $_GET['troop'] . 'troopname=' . $_GET['troopname'] 
 	      					. '">Ready to Play!</a>';
 				?>
 		    </div>
