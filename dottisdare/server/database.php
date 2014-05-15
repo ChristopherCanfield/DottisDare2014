@@ -155,7 +155,7 @@ class Database
 		$query->execute();
 	}
 	
-	private static function clueExists($troopId, $clueId)
+	public static function clueExists($troopId, $clueId)
 	{
 		if (!self::connect())
 		{
