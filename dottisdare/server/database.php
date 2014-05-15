@@ -171,10 +171,10 @@ class Database
 		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
 		
 		$query->execute();
-		$result = $query->fetchColumn();
+		$result = $query->fetch(PDO::FETCH_NUM);
 		if (!is_null($result))
 		{
-			$exists = ($result > 0);
+			$exists = ($result[0] > 0);
 		}
 		else
 		{
@@ -198,8 +198,8 @@ class Database
 		$query = $db->prepare($sql);
 		$query->execute();
 		
-		$result = $result->fetchColumn();
-		return $result;
+		$result = $query->fetch(PDO::FETCH_NUM);
+		return $result[0];
 	}
 	
 	/**
