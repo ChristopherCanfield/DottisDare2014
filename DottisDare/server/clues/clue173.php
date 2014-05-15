@@ -6,8 +6,12 @@
 							Clue Code
 						</h3>
 						
-						<form class="form-signin cluecode" role="form" id="form173"
-								onsubmit="validateClue(173, 'blueTriangle');return false;">
+						<?php
+							$troop = $_GET['troop'];
+							echo
+						'<form class="form-signin cluecode" role="form" id="form173"
+								onsubmit="validateClue(\'' . $troop . '\', 173, \'blueTriangle\');return false;">';
+						?>
 							<img src="images/clues/173.jpg" alt="Pool House" 
 									width="314" height="215" class="img-rounded modal-image-clue" />
 							<h4 id="clue173" class="clue-success">Test TEST</h4>

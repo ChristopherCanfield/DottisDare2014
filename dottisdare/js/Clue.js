@@ -19,9 +19,9 @@ var clueCodeCorrect = function(troopId, clueCode, modalId) {
 		$("#timeline").modal("show");
 	});
 	
-	jQuery.post({url: 'server/new_clue.php',
-			data: "troop=" + troopId + "&clue=" + clueCode
-});
+	$.post("server/new_clue.php",
+			{troop: troopId, clue: clueCode}
+	);
 };
 
 var clueCodeIncorrect = function(clueCode) {

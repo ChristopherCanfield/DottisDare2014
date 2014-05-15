@@ -21,7 +21,7 @@ class Database
 	{
 		if (self::isConnected())
 		{
-			return;
+			return true;
 		}
 		
 		$environment = Environment::get();
@@ -174,7 +174,7 @@ class Database
 		$result = $query->fetch();
 		if (!is_null($result))
 		{
-			$exists = ($result['count'] > 0);
+			$exists = ($result > 0);
 		}
 		else
 		{
@@ -198,7 +198,7 @@ class Database
 		$query = $db->prepare($sql);
 		$query->execute();
 		
-		$result = $query->fetch();
+		$result = $result->fetchColumn();
 		return $result;
 	}
 	
