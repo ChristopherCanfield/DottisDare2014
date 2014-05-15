@@ -135,6 +135,12 @@ class Database
 		}
 		$db = self::$db;
 		
+		if (self::clueExists($troopId, $clueId))
+		{
+			// Clue already exists for this troop, so don't re-add it.
+			return;
+		}
+		
 		$clueCount = self::getClueCount($troopId);
 		
 		$sql = 'insert into Timeline ' .
@@ -145,6 +151,38 @@ class Database
 		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
 		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
 		$query->bindValue(':timelineNumber', $clueCount);
+		
+		$query->execute();
+	}
+	
+	private static function clueExists($troopId, $clueId)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$sql = 'select count(*) from Timeline ' .
+				' where clueId = :clueId and troopId = :troopId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
+		
+		$query->execute();
+		$result = $query->fetch();
+		if (!is_null($result))
+		{
+			$exists = ($result['count'] > 0);
+		}
+		else
+		{
+			$exists = false;
+		}
+		$query->closeCursor();
+		
+		return $exists;
 	}
 
 	private static function getClueCount($troopId)

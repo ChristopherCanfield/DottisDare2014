@@ -7,12 +7,21 @@
 /**
  * Updates the form to reflect a correct clue code.
  */
-var clueCodeCorrect = function(clueCode) {
+var clueCodeCorrect = function(troopId, clueCode, modalId) {
 	$("#clue" + clueCode).css( "visibility", "visible");
 	$("#input" + clueCode).hide();
 	$("#submitText" + clueCode).hide();
-	$("#submitButton" + clueCode).text("Open Timeline");
 	$("#incorrect" + clueCode).hide();
+	
+	$("#submitButton" + clueCode).html("Open Timeline");
+	$("#form" + clueCode).submit(function() {
+		$("#" + modalId).modal("hide");
+		$("#timeline").modal("show");
+	});
+	
+	jQuery.post({url: 'server/new_clue.php',
+			data: "troop=" + troopId + "&clue=" + clueCode
+});
 };
 
 var clueCodeIncorrect = function(clueCode) {
@@ -22,12 +31,14 @@ var clueCodeIncorrect = function(clueCode) {
 /**
  * Determines whether the clue code is correct, and updates the form based on whether it is
  * correct or not.
+ * @param {troopId} troopId the troop's id.
  * @param {int} clueCode the correct clue code.
+ * @param {String} modalId the modal's html id.
  */
-var validateClue = function(clueCode) {
+var validateClue = function(troopId, clueCode, modalId) {
 	if (clueCode == $('#input' + clueCode).val())
 	{
-		clueCodeCorrect(clueCode);
+		clueCodeCorrect(troopId, clueCode, modalId);
 	}
 	else
 	{
