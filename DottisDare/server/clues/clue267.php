@@ -3,7 +3,7 @@
 			$clueFound = array_key_exists($clueId, $cluesFound);
 		?>
 		
-		<div class="modal fade" id="greenSquare" tabindex="-1" role="dialog" aria-labelledby="Green Square" aria-hidden="true">
+		<div class="modal fade" id="greenSquare" tabindex="-1" role="dialog">
 			<div class="modal-dialog modal-dialog-clue">
 				<div class="modal-content">					
 					<div class="modal-body modal-body-clue">

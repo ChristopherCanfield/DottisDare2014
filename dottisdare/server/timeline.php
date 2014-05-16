@@ -1,7 +1,7 @@
 <?php
 	$clues = Database::getClues($_GET['troop']);
 ?>	
-		<div class="modal fade" id="timeline" tabindex="-1" role="dialog" aria-labelledby="Timeline" aria-hidden="true">
+		<div class="modal fade" id="timeline" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">

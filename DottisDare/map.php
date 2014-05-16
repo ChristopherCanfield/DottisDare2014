@@ -46,7 +46,7 @@
 		?>
 		
 		<div class="centered">
-			<a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline" alt="Timeline">
+			<a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline">
 				Timeline
 			</a>
 	    </div>
@@ -73,34 +73,35 @@
         
         <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />
 		<map name="map">
-		    <area shape="poly" coords="659, 402, 712, 360, 670, 318, 617, 314, 610, 370" 
+		    <area shape="poly" coords="659,402,712,360,670,318,617,314,610,370" 
 		    		data-toggle="modal" href="#blueSquare" alt="Blue Square" />
-		    <area shape="poly" coords="687, 420, 736, 381, 806, 388, 799, 451, 718, 458" 
+		    <area shape="poly" coords="687,420,736,381,806,388,799,451,718,458" 
 		    		data-toggle="modal" href="#redTriangle" alt="Red Triangle" />
-		    <area shape="rect" coords="592, 472, 694, 545" 
+		    <area shape="rect" coords="592,472,694,545" 
 		    		data-toggle="modal" href="#greenSquare" alt="Green Square" />
-		    <area shape="rect" coords="725, 266, 823, 342" 
+		    <area shape="rect" coords="725,266,823,342" 
 		    		data-toggle="modal" href="#greenTriangle" alt="Green Triangle" />
-		    <area shape="poly" coords="575, 105, 698, 101, 697, 139, 638, 167, 582, 140" 
+		    <area shape="poly" coords="575,105,698,101,697,139,638,167,582,140" 
 		    		data-toggle="modal" href="#greenCircle" alt="Green Circle" />
-		    <area shape="poly" coords="655, 91, 572, 94, 547, 45, 652, 35, 697, 55, 698, 90" 
+		    <area shape="poly" coords="655,91,572,94,547,45,652,35,697,55,698,90" 
 		    		data-toggle="modal" href="#purpleTriangle" alt="Purple Triangle" />
-		    <area shape="rect" coords="610, 192, 684, 269" 
+		    <area shape="rect" coords="610,192,684,269" 
 		    		data-toggle="modal" href="#purpleSquare" alt="Purple Square" />
-		    <area shape="poly" coords="753, 136, 795, 203, 862, 195, 830, 136, 768, 115" 
+		    <area shape="poly" coords="753,136,795,203,862,195,830,136,768,115" 
 		    		data-toggle="modal" href="#redCircle" alt="Red Circle" />
-		    <area shape="poly" coords="781, 209, 764, 171, 732, 140, 701, 171, 729, 220" 
+		    <area shape="poly" coords="781,209,764,171,732,140,701,171,729,220" 
 		    		data-toggle="modal" href="#purpleCircle" alt="Purple Circle" />
-		    <area shape="rect" coords="484, 308, 571, 391" 
+		    <area shape="rect" coords="484,308,571,391" 
 		    		data-toggle="modal" href="#blueTriangle" alt="Blue Triangle" />
-		    <area shape="rect" coords="383, 224, 474, 332" 
+		    <area shape="rect" coords="383,224,474,332" 
 		    		data-toggle="modal" href="#redSquare" alt="Red Square" />
-		    <area shape="rect" coords="194, 220, 319, 325" 
+		    <area shape="rect" coords="194,220,319,325" 
 		    		data-toggle="modal" href="#blueCircle" alt="Blue Circle" />
 		</map>
 		<div class="centered small" style="margin-top: 10px;">
 			Campground map &copy; 2014 Girl Scouts of Eastern Pennsylvania
 		</div>
+	</div>
     </div> <!-- /container -->
     
     <footer>
