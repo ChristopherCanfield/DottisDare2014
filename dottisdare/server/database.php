@@ -1,5 +1,5 @@
 <?php
-require('environment.php');
+require_once('environment.php');
 
 
 /**
