@@ -47,7 +47,7 @@
 					        		Enter the 3-digit code found on the back of your clue:
 					        	</h4>
 								<input type="text" id="input' . $clueId . '" class="form-control dottisdare clue" placeholder="" required autofocus>
-								<h4 id="incorrect' . $clueId . '" class="clue-invalid">Incorrect clue code.</h4>';
+								<h4 id="incorrect' . $clueId . '" class="clue-invalid">Incorrect clue code</h4>';
 								$submitButtonText = "Submit Clue Code";
 							}
 							else 

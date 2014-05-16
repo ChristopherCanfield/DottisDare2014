@@ -117,7 +117,7 @@
 						</ul>
 						
 						<ul>
-							<li class="ui-state-default" style="background-color:#08684E;"><span class="ui-icon ui-icon-blank"></span>2006 - Dotti Died</li>
+							<li class="ui-state-default" style="background-color:#08684E;"><span class="ui-icon ui-icon-blank"></span>2010 - Dotti Died</li>
 						</ul>
 					</div>
 					
