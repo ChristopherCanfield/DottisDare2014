@@ -8,13 +8,10 @@
 		header('location: ' . $pathStart . '/index.php');
 	}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=device-width initial-scale=0.75">
     <meta name="description" content="Dotti's Dare Scavenger Hunt Rules" />
@@ -77,7 +74,7 @@
 	      	
 	      	<div class="centered">
 	      		<?php
-	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troop=' . $_GET['troop'] . '&troopname=' . $_GET['troopname'] 
+	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troop=' . rawurlencode($_GET['troop']) . '&amp;.troopname=' . rawurlencode($_GET['troopname'])
 	      					. '">Ready to Play!</a>';
 				?>
 		    </div>
