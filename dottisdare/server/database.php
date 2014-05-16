@@ -233,7 +233,10 @@ class Database
 		$result = $query->fetch();
 		while ($result != null) 
 		{
-			$clues[$result['clueId']] = $result['timelineNumber'];
+			$clueId = $result['clueId'];
+			$timelineNumber = $result['timelineNumber'];
+			
+			$clues[$clueId] = $timelineNumber;
 			$result = $query->fetch();
 		}
 		$query->closeCursor();

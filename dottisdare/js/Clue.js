@@ -6,7 +6,7 @@
 /**
  * Updates the form to reflect a correct clue code.
  */
-var clueCodeCorrect = function(troopId, clueCode, modalId) {
+var correctClueFormUpdates = function(troopId, clueCode, modalId) {
 	$("#clue" + clueCode).css( "visibility", "visible");
 	$("#input" + clueCode).hide();
 	$("#submitText" + clueCode).hide();
@@ -18,14 +18,18 @@ var clueCodeCorrect = function(troopId, clueCode, modalId) {
 		$("#timeline").modal("show");
 	});
 	
-	addClueCode(troopId, clueCode);
-};
-
-var addClueCode = function(troopId, clueCode)
-{
 	$.post("server/new_clue.php",
 			{troop: troopId, clue: clueCode}
 	);
+};
+
+/**
+ * Closes the specified modal and opens the timeline.
+ */
+var closeModalOpenTimeline = function(modalId)
+{
+	$("#" + modalId).modal("hide");
+	$("#timeline").modal("show");
 };
 
 var clueCodeIncorrect = function(clueCode) {
@@ -42,7 +46,7 @@ var clueCodeIncorrect = function(clueCode) {
 var validateClue = function(troopId, clueCode, modalId) {
 	if (clueCode == $('#input' + clueCode).val())
 	{
-		clueCodeCorrect(troopId, clueCode, modalId);
+		correctClueFormUpdates(troopId, clueCode, modalId);
 	}
 	else
 	{
