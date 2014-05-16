@@ -184,7 +184,6 @@ h3.clue {
 
 .clue-success {
 	margin-top: 15px;
-	margin-bottom: 25px;
 	visibility: hidden;
 	text-align: center;
 }
@@ -192,8 +191,11 @@ h3.clue {
 .clue-invalid {
 	color: #E80000;
 	visibility: hidden;
-	margin-top: 15px;
 	text-align: center;
+}
+
+input.clue {
+	margin-bottom: 20px;
 }
 
 
