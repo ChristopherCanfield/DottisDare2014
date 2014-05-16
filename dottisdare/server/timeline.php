@@ -1,5 +1,4 @@
 <?php
-	require('server/database.php');
 	$clues = Database::getClues($_GET['troop']);
 ?>	
 		<div class="modal fade" id="timeline" tabindex="-1" role="dialog" aria-labelledby="Timeline" aria-hidden="true">

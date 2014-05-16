@@ -53,20 +53,24 @@
 			</a>
 	    </div>
 
-		<?php 
-			include 'server/clues/clue173.php';
-			include 'server/clues/clue178.php';
-			include 'server/clues/clue217.php';
-			include 'server/clues/clue218.php';
-			include 'server/clues/clue249.php';
-			include 'server/clues/clue267.php';
-			include 'server/clues/clue472.php';
-			include 'server/clues/clue514.php';
-			include 'server/clues/clue542.php';
-			include 'server/clues/clue874.php';
-			include 'server/clues/clue875.php';
-			include 'server/clues/clue925.php';
-			include 'server/timeline.php';
+		<?php
+			$troop = $_GET['troop'];
+			require 'server/database.php';
+			$cluesFound = Database::getClues($troop);
+			
+			require 'server/clues/clue173.php';
+			require 'server/clues/clue178.php';
+			require 'server/clues/clue217.php';
+			require 'server/clues/clue218.php';
+			require 'server/clues/clue249.php';
+			require 'server/clues/clue267.php';
+			require 'server/clues/clue472.php';
+			require 'server/clues/clue514.php';
+			require 'server/clues/clue542.php';
+			require 'server/clues/clue874.php';
+			require 'server/clues/clue875.php';
+			require 'server/clues/clue925.php';
+			require 'server/timeline.php';
 		?>
         
         <img src="images/map.jpg" height="722" width="962" alt="Camp Map" usemap="#map" />

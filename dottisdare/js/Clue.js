@@ -3,7 +3,6 @@
  * @author Christopher D. Canfield
  */
 
-
 /**
  * Updates the form to reflect a correct clue code.
  */
@@ -19,6 +18,11 @@ var clueCodeCorrect = function(troopId, clueCode, modalId) {
 		$("#timeline").modal("show");
 	});
 	
+	addClueCode(troopId, clueCode);
+};
+
+var addClueCode = function(troopId, clueCode)
+{
 	$.post("server/new_clue.php",
 			{troop: troopId, clue: clueCode}
 	);
