@@ -34,17 +34,12 @@
 								width="314" height="215" class="img-rounded modal-image-clue" />';
 							
 							$clueTextStyleVisibility = ($clueFound) ? 'style="visibility:visible"' : '';
-							echo
-							'<h4 id="clue' . $clueId . '" class="clue-success" ' . $clueTextStyleVisibility . '>' .
-								// The clue text.
-								'Test TEST' .
-							'</h4>';
 							
 							$submitButtonText = "";
 							if (!$clueFound)
 							{
 								echo
-								'<h4 id="submitText' . $clueId . '" class="form-signin-heading">
+								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">
 					        		Enter the 3-digit code found on the back of your clue:
 					        	</h4>
 								<input type="text" id="input' . $clueId . '" class="form-control dottisdare clue" placeholder="" required autofocus>

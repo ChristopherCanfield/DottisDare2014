@@ -161,10 +161,6 @@ form.cluecode {
 	width: 450px;
 }
 
-/*.cluecode > button {
-	margin-left: 59px;
-}*/
-
 .modal-dialog-clue {
 	width: 500px;
 }
@@ -180,12 +176,6 @@ form.cluecode {
 h3.clue {
 	color: #ffffff;
 	margin: 0px;
-}
-
-.clue-success {
-	margin-top: 15px;
-	visibility: hidden;
-	text-align: center;
 }
 
 .clue-invalid {
