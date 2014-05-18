@@ -22,7 +22,7 @@
 							else
 							{
 								// Change the value at the end for each clue.
-								$onSubmitValue = 'closeModalOpenTimeline(\'blueTriangle\');';
+								$onSubmitValue = 'closeModalOpenTimeline(\'' . $troop . '\', \'' . $troopName . '\',\'blueTriangle\');';
 							}
 							
 							echo

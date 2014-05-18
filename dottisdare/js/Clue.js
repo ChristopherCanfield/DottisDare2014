@@ -31,8 +31,8 @@ var correctClueFormUpdates = function(troopId, troopName, clueCode, modalId) {
 var closeModalOpenTimeline = function(troopId, troopName, modalId)
 {
 	$("#" + modalId).modal("hide");
-	window.location.href("map.php?troop=" + troopId + "&amp;troopName=" + encodeURIComponent(troopName) +
-			"&amp;showtimeline");
+	var url = "map.php?troop=" + troopId + "&troopname=" + troopName + "&showtimeline";
+	window.location.replace(encodeURI(url));
 };
 
 var clueCodeIncorrect = function(clueCode) {
