@@ -33,8 +33,6 @@
 							'<img src="images/clues/' . $clueId . '.jpg" alt="Pool House" 
 								width="314" height="215" class="img-rounded modal-image-clue" />';
 							
-							$clueTextStyleVisibility = ($clueFound) ? 'style="visibility:visible"' : '';
-							
 							$submitButtonText = "";
 							if (!$clueFound)
 							{
@@ -48,6 +46,14 @@
 							}
 							else 
 							{
+								echo
+								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">
+					        	</h4>
+					        	<script>
+					        		$(function() {
+					        			$("#clueSubmitText' . $clueId . '").text(getClueText(' . $clueId . '));
+					        		});
+					        	</script>';
 								$submitButtonText = "Open Timeline";
 							}
 							

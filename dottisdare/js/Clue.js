@@ -11,7 +11,7 @@ var correctClueFormUpdates = function(troopId, troopName, clueCode, modalId) {
 	$("#input" + clueCode).hide();
 	$("#incorrect" + clueCode).hide();
 	
-	$("#clueSubmitText" + clueCode).text();
+	$("#clueSubmitText" + clueCode).text(getClueText(clueCode));
 	
 	$("#submitButton" + clueCode).html("Open Timeline");
 	$("#form" + clueCode).submit(function() {
@@ -61,64 +61,39 @@ var validateClue = function(troopId, troopName, clueCode, modalId) {
 
 /**
  * Returns the text of the specified clue.
- * @param {Object} clueId the clue's id.
+ * @param {int} clueCode the clue's code.
+ * @return {String} the clue's description text.
  */
-var getClueText = function(clueId) {
+var getClueText = function(clueCode) {
 	// This data should be pulled from the database...
 	
 	switch (clueId)
 	{
 		case 173:
-		
-			break;
+			return "Dotti was left stranded on a rock in the middle of a raging river while whitewater rafting with her Senior Troop.";
 		case 178:
-		
-			break;
+			return "Dotti became a leader of an intermediate troop.";
 		case 217:
-		
-			break;
+			return "Dotti began working for Girl Scouts.";
 		case 218:
-		
-			break;
+			return "Dotti became her council's delegate for the Girl Scout National Convention. She would reprise this role many times.";
 		case 249:
-		
-			break;
+			return "Dotti joined the Lansdale Ambulance Corp.";
 		case 267:
-		
-			break;
+			return "Dotti moved to Chicago.";
 		case 472:
-		
-			break;
+			return "Dotti worked as a cook during summer camp at Camp Laughing Waters.";
 		case 514:
-		
-			break;
+			return "A member of Dotti's Senior Troop #553 was named the first Gold Award recipient in the Greater Philadelphia Council.";
 		case 542:
-		
-			break;
+			return "Dotti began traveling to Appalachia each summer to help build and repair homes for the poor.";
 		case 874:
-		
-			break;
+			return "Dotti one the highest national Girl Scout honor - the Thanks Badge II.";
 		case 875:
-		
-			break;
+			return "Dotti led a Pilot troop of five-year-olds to help gather information before implementation of the Daisy program.";
 		case 925:
-		
-			break;
+			return "Dotti graduated from North Penn High School.";
 		default:
 			throw "Invalid clue id passed to getClueText.";
 	}
 };
-
-
-173	Dotti was left stranded on a rock in the middle of a raging river while whitewater rafting with her Senior Troop.
-178	Dotti became a leader of an intermediate troop.
-217	Dotti began working for Girl Scouts.
-218	Dotti became her council's delegate for the Girl Scout National Convention. She would reprise this role many times.
-249	Dotti joined the Lansdale Ambulance Corp. 
-267	Dotti moved to Chicago.
-472	Dotti worked as a cook during summer camp at Camp Laughing Waters.
-514	A member of Dotti's Senior Troop #553 was named the first Gold Award recipient in the Greater Philadelphia Council.
-542	Dotti began traveling to Appalachia each summer to help build and repair homes for the poor.
-874	Dotti one the highest national Girl Scout honor - the Thanks Badge II.
-875	Dotti led a Pilot troop of five-year-olds to help gather information before implementation of the Daisy program.
-925	Dotti graduated from North Penn High School
