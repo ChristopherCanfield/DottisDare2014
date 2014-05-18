@@ -115,6 +115,7 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="lib/touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script src="lib/purl/purl.js.htm"></script>
     
     <script>
 		$(function() {
@@ -133,6 +134,10 @@
 			
 			$( "#sortable" ).disableSelection();
 		});
+		
+		$(document).ready() {
+			
+		}
 	</script>
 	
 	<script src="js/Clue.js"></script>
