@@ -48,7 +48,7 @@
 							{
 								echo
 								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">' .
-									getClueDescription($clueId) .
+									Database::getClueDescription($clueId) .
 					        	'</h4>';
 								$submitButtonText = "Open Timeline";
 							}
