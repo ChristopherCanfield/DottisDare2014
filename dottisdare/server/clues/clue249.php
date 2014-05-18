@@ -16,7 +16,8 @@
 							if (!$clueFound)
 							{
 								// Change the value at the end for each clue.
-								$onSubmitValue = 'validateClue(\'' . $troop . '\', ' . $clueId . ', \'purpleSquare\');';
+								$onSubmitValue = 'validateClue(\'' . $troop . '\', \'' . $troopName . '\',' . 
+										$clueId . ', \'purpleSquare\');';
 							}
 							else
 							{

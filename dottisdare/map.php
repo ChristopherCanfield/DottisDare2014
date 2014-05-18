@@ -40,20 +40,21 @@
     <div class="container">
       <div class="map dottisdare centered">
         <?php
-			echo '<h3 class="map">' . $_GET['troopname'] . '</h3>';
+        	$troop = $_GET['troop'];
+			require 'server/database.php';
+			$cluesFound = Database::getClues($troop);
+			$troopName = $_GET['troopname'];
+        
+			echo 
+			'<h3 class="map">' . $troopName . '</h3>
 			
-			echo
-			'<div class="centered">
+			<div class="centered">
 				<!-- <a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline"> -->
-				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . $_GET['troop'] .
-					'&amp;troopname=' . $_GET['troopname'] . '&amp;showtimeline">
+				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . $troop .
+					'&amp;troopname=' . $troopName . '&amp;showtimeline">
 					Timeline
 				</a>
 	    	</div>';
-
-			$troop = $_GET['troop'];
-			require 'server/database.php';
-			$cluesFound = Database::getClues($troop);
 			
 			require 'server/clues/clue173.php';
 			require 'server/clues/clue178.php';
@@ -124,9 +125,10 @@
 			        var timelineData = $(this).sortable('serialize');
 
 			        $.ajax({
-			            data: timelineData + '&troop=' <?php $_GET['troop'] ?> ,
+			            data: timelineData + '&troop=' <?php $troop ?> ,
 			            type: 'POST',
-			            url: 'server/processTimeline.php'
+			            url: 'server/processTimeline.php',
+			            async: false
 			        });
 			    }
 			});
@@ -142,11 +144,5 @@
 	</script>
 	
 	<script src="js/Clue.js"></script>
-	
-	<script>
-		// $(window).load(function() {
-// 			
-		// });
-	</script>
   </body>
 </html>

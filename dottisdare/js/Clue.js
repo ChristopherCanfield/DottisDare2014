@@ -6,7 +6,7 @@
 /**
  * Updates the form to reflect a correct clue code.
  */
-var correctClueFormUpdates = function(troopId, clueCode, modalId) {
+var correctClueFormUpdates = function(troopId, troopName, clueCode, modalId) {
 	$("#clue" + clueCode).css( "visibility", "visible");
 	$("#input" + clueCode).hide();
 	$("#submitText" + clueCode).hide();
@@ -14,22 +14,25 @@ var correctClueFormUpdates = function(troopId, clueCode, modalId) {
 	
 	$("#submitButton" + clueCode).html("Open Timeline");
 	$("#form" + clueCode).submit(function() {
-		$("#" + modalId).modal("hide");
-		$("#timeline").modal("show");
+		// Do nothing.
 	});
 	
 	$.post("server/new_clue.php",
-			{troop: troopId, clue: clueCode}
-	);
+			{troop: troopId, clue: clueCode},
+			$("#form" + clueCode).submit(function() {
+				closeModalOpenTimeline(troopId, troopName, modalId);
+			})
+		);
 };
 
 /**
  * Closes the specified modal and opens the timeline.
  */
-var closeModalOpenTimeline = function(modalId)
+var closeModalOpenTimeline = function(troopId, troopName, modalId)
 {
 	$("#" + modalId).modal("hide");
-	$("#timeline").modal("show");
+	window.location.href("map.php?troop=" + troopId + "&amp;troopName=" + encodeURIComponent(troopName) +
+			"&amp;showtimeline");
 };
 
 var clueCodeIncorrect = function(clueCode) {
@@ -40,13 +43,14 @@ var clueCodeIncorrect = function(clueCode) {
  * Determines whether the clue code is correct, and updates the form based on whether it is
  * correct or not.
  * @param {troopId} troopId the troop's id.
+ * @param {String} troopName the name of the troop.
  * @param {int} clueCode the correct clue code.
  * @param {String} modalId the modal's html id.
  */
-var validateClue = function(troopId, clueCode, modalId) {
+var validateClue = function(troopId, troopName, clueCode, modalId) {
 	if (clueCode == $('#input' + clueCode).val())
 	{
-		correctClueFormUpdates(troopId, clueCode, modalId);
+		correctClueFormUpdates(troopId, troopName, clueCode, modalId);
 	}
 	else
 	{
