@@ -74,7 +74,8 @@
 	      	
 	      	<div class="centered">
 	      		<?php
-	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troop=' . rawurlencode($_GET['troop']) . '&amp;.troopname=' . rawurlencode($_GET['troopname'])
+	      			echo '<a class="btn btn-lg btn-primary dottisdare rules" href="map.php?troop=' . 
+	      					rawurlencode($_GET['troop']) . '&amp;troopname=' . rawurlencode($_GET['troopname'])
 	      					. '">Ready to Play!</a>';
 				?>
 		    </div>
