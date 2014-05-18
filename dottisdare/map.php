@@ -40,18 +40,17 @@
     <div class="container">
       <div class="map dottisdare centered">
         <?php
-			echo '<h3 class="map">';
-			echo $_GET['troopname'];
-			echo '</h3>';
-		?>
-		
-		<div class="centered">
-			<a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline">
-				Timeline
-			</a>
-	    </div>
+			echo '<h3 class="map">' . $_GET['troopname'] . '</h3>';
+			
+			echo
+			'<div class="centered">
+				<!-- <a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline"> -->
+				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . $_GET['troop'] .
+					'&amp;troopname=' . $_GET['troopname'] . '&amp;showtimeline">
+					Timeline
+				</a>
+	    	</div>';
 
-		<?php
 			$troop = $_GET['troop'];
 			require 'server/database.php';
 			$cluesFound = Database::getClues($troop);
@@ -115,7 +114,7 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="lib/touch-punch/jquery.ui.touch-punch.min.js"></script>
-    <script src="lib/purl/purl.js.htm"></script>
+    <script src="lib/purl/purl.js"></script>
     
     <script>
 		$(function() {
@@ -132,14 +131,22 @@
 			    }
 			});
 			
-			$( "#sortable" ).disableSelection();
-		});
-		
-		$(document).ready() {
+			$("#sortable").disableSelection();
 			
-		}
+			var params = $.url().param();
+			if ("showtimeline" in params)
+			{
+				$("#timeline").modal("show");
+			}
+		});
 	</script>
 	
 	<script src="js/Clue.js"></script>
+	
+	<script>
+		// $(window).load(function() {
+// 			
+		// });
+	</script>
   </body>
 </html>
