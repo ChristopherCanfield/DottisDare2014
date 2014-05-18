@@ -37,7 +37,7 @@
 							if (!$clueFound)
 							{
 								echo
-								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">
+								'<h4 id="clueSubmitText' . $clueId . '" class="clue-text">
 					        		Enter the 3-digit code found on the back of your clue:
 					        	</h4>
 								<input type="text" id="input' . $clueId . '" class="form-control dottisdare clue" placeholder="" required autofocus>
@@ -47,7 +47,7 @@
 							else 
 							{
 								echo
-								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">' .
+								'<h4 id="clueSubmitText' . $clueId . '" class="clue-text">' .
 									Database::getClueDescription($clueId) .
 					        	'</h4>';
 								$submitButtonText = "Open Timeline";

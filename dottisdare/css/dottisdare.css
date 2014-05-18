@@ -154,7 +154,7 @@ a.rules {
 
 
 /********************/
-/** Clue code page **/
+/** Clue codes **/
 /********************/
 
 form.cluecode {
@@ -186,6 +186,11 @@ h3.clue {
 
 input.clue {
 	margin-bottom: 20px;
+}
+
+.clue-text {
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 
 
