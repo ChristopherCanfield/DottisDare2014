@@ -6,21 +6,21 @@
 /**
  * Updates the form to reflect a correct clue code.
  */
-var correctClueFormUpdates = function(troopId, troopName, clueCode, modalId) {
-	$("#clue" + clueCode).css( "visibility", "visible");
-	$("#input" + clueCode).hide();
-	$("#incorrect" + clueCode).hide();
+var correctClueFormUpdates = function(troopId, troopName, clueId, modalId) {
+	$("#clue" + clueId).css( "visibility", "visible");
+	$("#input" + clueId).hide();
+	$("#incorrect" + clueId).hide();
 	
-	$("#clueSubmitText" + clueCode).text(getClueText(clueCode));
+	$("#clueSubmitText" + clueId).text(getClueText(clueId));
 	
-	$("#submitButton" + clueCode).html("Open Timeline");
-	$("#form" + clueCode).submit(function() {
+	$("#submitButton" + clueId).html("Open Timeline");
+	$("#form" + clueId).submit(function() {
 		// Do nothing.
 	});
 	
 	$.post("server/new_clue.php",
-			{troop: troopId, clue: clueCode},
-			$("#form" + clueCode).submit(function() {
+			{troop: troopId, clue: clueId},
+			$("#form" + clueId).submit(function() {
 				closeModalOpenTimeline(troopId, troopName, modalId);
 			})
 		);
@@ -36,8 +36,8 @@ var closeModalOpenTimeline = function(troopId, troopName, modalId)
 	window.location.replace(encodeURI(url));
 };
 
-var clueCodeIncorrect = function(clueCode) {
-	$("#incorrect" + clueCode).css("visibility", "visible");
+var clueCodeIncorrect = function(clueId) {
+	$("#incorrect" + clueId).css("visibility", "visible");
 };
 
 /**
@@ -45,26 +45,26 @@ var clueCodeIncorrect = function(clueCode) {
  * correct or not.
  * @param {troopId} troopId the troop's id.
  * @param {String} troopName the name of the troop.
- * @param {int} clueCode the correct clue code.
+ * @param {int} clueId the correct clue id.
  * @param {String} modalId the modal's html id.
  */
-var validateClue = function(troopId, troopName, clueCode, modalId) {
-	if (clueCode == $('#input' + clueCode).val())
+var validateClue = function(troopId, troopName, clueId, modalId) {
+	if (clueId == $('#input' + clueId).val())
 	{
-		correctClueFormUpdates(troopId, troopName, clueCode, modalId);
+		correctClueFormUpdates(troopId, troopName, clueId, modalId);
 	}
 	else
 	{
-		clueCodeIncorrect(clueCode);
+		clueCodeIncorrect(clueId);
 	}
 };
 
 /**
  * Returns the text of the specified clue.
- * @param {int} clueCode the clue's code.
+ * @param {int} clueId the clue's id.
  * @return {String} the clue's description text.
  */
-var getClueText = function(clueCode) {
+var getClueText = function(clueId) {
 	// This data should be pulled from the database...
 	
 	switch (clueId)

@@ -47,8 +47,9 @@
 							else 
 							{
 								echo
-								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">
-					        	</h4>';
+								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">' .
+									getClueDescription($clueId) .
+					        	'</h4>';
 								$submitButtonText = "Open Timeline";
 							}
 							
