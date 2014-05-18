@@ -243,6 +243,38 @@ class Database
 		
 		return $clues;
 	}
+	
+	/**
+	 * Gets a clue's description.
+	 * @param $clueId the clue's id.
+	 * @return the clue's description.
+	 */
+	public static function getClueDescription($clueId)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$sql = 'select Clue.description' 
+			. ' from Clue'
+			. ' where Clue.id = :clueId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':clueId', $clueId, PDO::PARAM_INT);
+		$query->execute();
+		
+		$result = $query->fetch();
+		$description = null;
+		if (!is_null($result))
+		{
+			$description = $result['description'];
+		}
+		$query->closeCursor();
+		
+		return $description;
+	}
 }
 
 ?>

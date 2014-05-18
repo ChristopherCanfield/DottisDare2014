@@ -48,12 +48,7 @@
 							{
 								echo
 								'<h4 id="clueSubmitText' . $clueId . '" class="form-signin-heading">
-					        	</h4>
-					        	<script>
-					        		$(function() {
-					        			$("#clueSubmitText' . $clueId . '").text(getClueText(' . $clueId . '));
-					        		});
-					        	</script>';
+					        	</h4>';
 								$submitButtonText = "Open Timeline";
 							}
 							
