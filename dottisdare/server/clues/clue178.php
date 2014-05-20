@@ -48,7 +48,7 @@
 							{
 								echo
 								'<h4 id="clueSubmitText' . $clueId . '" class="clue-text">' .
-									Database::getClueDescription($clueId) .
+									$cluesFound[$clueId]->getDescription() .
 					        	'</h4>';
 								$submitButtonText = "Open Timeline";
 							}

@@ -9,7 +9,7 @@
 					<div class="modal-body modal-body-clue">
 						<h3 class="clue">
 							<?php
-								echo $cluesFound($clueId)->getDescription()
+								$allClues[$clueId]->getDescription();
 							?>
 						</h3>
 						
@@ -50,7 +50,7 @@
 							{
 								echo
 								'<h4 id="clueSubmitText' . $clueId . '" class="clue-text">' .
-									$cluesFound($clueId)->getDescription() .
+									$cluesFound[$clueId]->getDescription() .
 					        	'</h4>';
 								$submitButtonText = "Open Timeline";
 							}

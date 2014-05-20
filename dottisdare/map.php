@@ -43,6 +43,7 @@
         	$troop = $_GET['troop'];
 			require 'server/database.php';
 			$cluesFound = Database::getClues($troop);
+			$allClues = Database::getAllClues();
 			$troopName = $_GET['troopname'];
         
 			echo 

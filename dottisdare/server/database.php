@@ -9,8 +9,9 @@ class Clue
 	
 	public function __construct($id, $description, $location)
 	{
-		$this->clueId = $clueId;
-		$this->clueDescription = $clueDescription;
+		$this->clueId = $id;
+		$this->clueDescription = $description;
+		$this->location = $location;
 	}
 	
 	public function getId()
@@ -63,6 +64,7 @@ class Database
 		}
 		
 		$username = 'qgtlbkzc_troop';
+		// Note: Update to correct password when moving to production.
 		$password = 'sIeRFCj97ttkbGS';
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 		
@@ -236,18 +238,22 @@ class Database
 	}
 	
 	/**
+	 * Returns all clues, including those that haven't yet been found.
+	 * @return a map of all clues for the specified troop. key: clue id; value: Clue object.
+	 */
+	public static function getAllClues()
+	{
+		return self::getClues(null);	
+	}
+	
+	/**
 	 * Gets all clues for the specified troop id. The clues are returned in the timeline order set
 	 * by the team.
-	 * @param $troopId the id of the troop to return the clues for.
+	 * @param $troopId the id of the troop to return the clues for, or null to return all clues.
 	 * @return a map of all clues for the specified troop. key: clue id; value: Clue object.
 	 */
 	public static function getClues($troopId)
-	{
-		if (empty($troopId))
-		{
-			return null;
-		}
-		
+	{		
 		if (!self::connect())
 		{
 			throw new Exception('Unable to connect to database');
@@ -255,14 +261,20 @@ class Database
 		$db = self::$db;
 		
 		$sql = 'SELECT clue.id, clue.description, clue.location
-				FROM clue
-				inner join timeline
-				ON clue.id = timeline.clueId
-				where timeline.troopId = :troopId
-				ORDER BY timeline.timelineNumber ASC';
+				FROM clue';
+		if (!empty($troopId))
+		{
+			$sql .= ' inner join timeline
+						ON clue.id = timeline.clueId 
+						where timeline.troopId = :troopId 
+						ORDER BY timeline.timelineNumber ASC';
+		} 
 		
 		$query = $db->prepare($sql);
-		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		if (!empty($troopId))
+		{
+			$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		}
 
 		$query->execute();
 		
