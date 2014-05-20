@@ -1,0 +1,13 @@
+insert into Clue (id, description, location)
+values (173, 'Dotti was left stranded on a rock in the middle of a raging river while whitewater rafting with her Senior Troop.', 'Pool House'),
+(178, 'Dotti became a leader of an intermediate troop.', 'Birdhouse at Conestoga'),
+(217, 'Dotti began working for Girl Scouts.', 'Pennypack Picnic Tables'),
+(218, 'Dotti became her council\'s delegate for the Girl Scout National Convention. She would reprise this role many times.', 'Tree at Conewago'),
+(249, 'Dotti joined the Lansdale Ambulance Corp.', 'Shenango Sign'),
+(267, 'Dotti moved to Chicago.', 'Murphy House'),
+(472, 'Dotti worked as a cook during summer camp at Camp Laughing Waters.', 'Rock at DJ\'s'),
+(514, 'A member of Dotti\'s Senior Troop #553 was named the first Gold Award recipient in the Greater Philadelphia Council.', 'Ginder Barn'),
+(542, 'Dotti began traveling to Appalachia each summer to help build and repair homes for the poor.', 'Stone Bridge at Conestoga'),
+(874, 'Dotti was awarded the highest national Girl Scout honor - the Thanks Badge II.', 'Dotti\'s Tree'),
+(875, 'Dotti led a Pilot troop of five-year-olds to help gather information before implementation of the Daisy program.', 'Speed Limit Sign by Dining Hall'),
+(925, 'Dotti graduated from North Penn High School.', 'Eagle Bridge');
