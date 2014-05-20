@@ -33,11 +33,13 @@
   </head>
   <body>
 
-	<h1 class="title">
-    	Dotti's Dare 2014 Map &amp; Timeline
-    </h1>
+	<?php require('server/header.php');	?>
 
-    <div class="container">
+    <div class="container">    	
+    	<h1 class="title">
+    		Dotti's Dare 2014 Map &amp; Timeline
+    	</h1>
+    	
       <div class="map dottisdare centered">
         <?php
         	$troop = $_GET['troop'];
@@ -51,8 +53,8 @@
 			<h3 class="map">' . $troopName . '</h3>
 			
 			<div class="centered">
-				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . $troop .
-					'&amp;troopname=' . $troopName . '&amp;showtimeline">
+				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . rawurlencode($troop) .
+					'&amp;troopname=' . rawurlencode($troopName) . '&amp;showtimeline">
 					Timeline
 				</a>
 	    	</div>';

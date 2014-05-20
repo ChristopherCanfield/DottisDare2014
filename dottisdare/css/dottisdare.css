@@ -214,3 +214,42 @@ a.map {
 	margin-top: 1px;
 	border-color: #5FF39B;
 }
+
+.navbar-dottisdare {
+	height: 38px;
+	color: #FFFFFF;
+	background-color: #0C9B74;
+	border-color: #5FF39B;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-radius: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+a.navbar-dottisdare {
+	color: #FFFFFF;
+	background-color: #08684E;
+	display:block;
+	width: 90px;
+	text-align: center;
+	padding:0px;
+	margin:0px;
+	padding-top: 5px;
+}
+
+ul.nav {
+	height: 35px;
+	padding:0px;
+	margin:0px;
+}
+
+li.navbar-dottisdare {
+	float:right;
+	padding: 1px;
+	height: 35px;
+}
+
+span.navbar-dottisdare {
+	float:right;
+}

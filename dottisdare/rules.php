@@ -32,11 +32,13 @@
     <![endif]-->
   </head>
   <body>
-    <h1 class="title">
-    	Dotti's Dare 2014 Scavenger Hunt Rules
-    </h1>
-    
-    <div class="container">  	
+  	<?php require('server/header.php');	?>
+  	
+    <div class="container">  
+    	<h1 class="title">
+    		Dotti's Dare 2014 Scavenger Hunt Rules
+    	</h1>
+    		
   		<div class="rules dottisdare">
   			<?php 	
 				echo '<h3 class="rules">';
