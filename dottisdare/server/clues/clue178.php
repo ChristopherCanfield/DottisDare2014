@@ -8,7 +8,9 @@
 				<div class="modal-content">					
 					<div class="modal-body modal-body-clue">
 						<h3 class="clue">
-							Clue Code
+							<?php
+								$allClues[$clueId]->getDescription();
+							?>
 						</h3>
 						
 						<?php

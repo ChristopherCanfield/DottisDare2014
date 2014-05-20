@@ -8,7 +8,9 @@
 				<div class="modal-content">					
 					<div class="modal-body modal-body-clue">
 						<h3 class="clue">
-							Clue Code
+							<?php
+								$allClues[$clueId]->getDescription();
+							?>
 						</h3>
 						
 						<?php
@@ -48,7 +50,7 @@
 							{
 								echo
 								'<h4 id="clueSubmitText' . $clueId . '" class="clue-text">' .
-									Database::getClueDescription($clueId) .
+									$cluesFound[$clueId]->getDescription() .
 					        	'</h4>';
 								$submitButtonText = "Open Timeline";
 							}
