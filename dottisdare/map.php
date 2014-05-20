@@ -46,10 +46,10 @@
 			$troopName = $_GET['troopname'];
         
 			echo 
-			'<h3 class="map">' . $troopName . '</h3>
+			'<span id="troop" troop="' . $troop . '"></span>
+			<h3 class="map">' . $troopName . '</h3>
 			
 			<div class="centered">
-				<!-- <a class="btn btn-lg btn-primary dottisdare map" data-toggle="modal" href="#timeline"> -->
 				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . $troop .
 					'&amp;troopname=' . $troopName . '&amp;showtimeline">
 					Timeline
@@ -122,13 +122,13 @@
 			$('#sortable').sortable({
 			    axis: 'y',
 			    update: function (event, ui) {
-			        var timelineData = $(this).sortable('serialize');
-
+			        var timelineData = $('#sortable').sortable('serialize');
+					
 			        $.ajax({
-			            data: timelineData + '&troop=' <?php $troop ?> ,
+			            data: timelineData + '&troop=' + $('#troop').attr('troop'),
 			            type: 'POST',
-			            url: 'server/processTimeline.php',
-			            async: false
+			            url: 'server/process_timeline.php',
+			            async: true
 			        });
 			    }
 			});

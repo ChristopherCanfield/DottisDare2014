@@ -18,7 +18,7 @@
 							foreach ($clues as $clue => $description)
 							{
 								echo 
-								'<li id="clue-"' . $clue . '" class="ui-state-default small timeline"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+								'<li id="clue_' . $clue . '" class="ui-state-default small timeline"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
 									Clue ' . $clue . '<br>' .
 									$description . '</li>';
 							}

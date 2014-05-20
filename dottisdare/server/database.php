@@ -242,10 +242,12 @@ class Database
 		}
 		$db = self::$db;
 		
-		$sql = 'select Timeline.clueId, Timeline.description 
-				from Timeline
-			 	where Timeline.troopId = :troopId
-				order by Timeline.timelineNumber;';
+		$sql = 'SELECT clue.id, clue.description
+				FROM clue
+				inner join timeline
+				ON clue.id = timeline.clueId
+				where timeline.troopId = :troopId
+				ORDER BY timeline.timelineNumber ASC';
 		
 		$query = $db->prepare($sql);
 		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
@@ -256,10 +258,10 @@ class Database
 		$result = $query->fetch();
 		while ($result != null) 
 		{
-			$clueId = $result['clueId'];
-			$timelineNumber = $result['timelineNumber'];
+			$clueId = $result['id'];
+			$description = $result['description'];
 			
-			$clues[$clueId] = $timelineNumber;
+			$clues[$clueId] = $description;
 			$result = $query->fetch();
 		}
 		$query->closeCursor();
