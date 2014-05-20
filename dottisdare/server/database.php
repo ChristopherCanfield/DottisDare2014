@@ -260,14 +260,14 @@ class Database
 		}
 		$db = self::$db;
 		
-		$sql = 'SELECT clue.id, clue.description, clue.location
-				FROM clue';
+		$sql = 'SELECT Clue.id, Clue.description, Clue.location
+				FROM Clue';
 		if (!empty($troopId))
 		{
-			$sql .= ' inner join timeline
-						ON clue.id = timeline.clueId 
-						where timeline.troopId = :troopId 
-						ORDER BY timeline.timelineNumber ASC';
+			$sql .= ' inner join Timeline
+						ON Clue.id = Timeline.clueId 
+						where Timeline.troopId = :troopId 
+						ORDER BY Timeline.timelineNumber ASC';
 		} 
 		
 		$query = $db->prepare($sql);
