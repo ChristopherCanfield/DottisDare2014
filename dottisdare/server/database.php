@@ -1,6 +1,28 @@
 <?php
 require_once('environment.php');
 
+class Clue
+{
+	private $clueId;
+	private $clueDescription;
+	
+	public function __construct($clueId, $clueDescription)
+	{
+		$this->clueId = $clueId;
+		$this->clueDescription = $clueDescription;
+	}
+	
+	public function getId()
+	{
+		return $this->clueId;
+	}
+	
+	public function getDescription()
+	{
+		return $this->clueDescription;
+	}
+}
+
 
 /**
  * The connection to the database.
@@ -220,9 +242,10 @@ class Database
 		}
 		$db = self::$db;
 		
-		$sql = 'select Timeline.clueId, Timeline.timelineNumber' 
-			. ' from Timeline'
-			. ' where Timeline.troopId = :troopId;';
+		$sql = 'select Timeline.clueId, Timeline.description 
+				from Timeline
+			 	where Timeline.troopId = :troopId
+				order by Timeline.timelineNumber;';
 		
 		$query = $db->prepare($sql);
 		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
