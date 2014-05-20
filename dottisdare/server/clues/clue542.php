@@ -9,7 +9,7 @@
 					<div class="modal-body modal-body-clue">
 						<h3 class="clue">
 							<?php
-								$allClues[$clueId]->getDescription();
+								echo $allClues[$clueId]->getLocation();
 							?>
 						</h3>
 						
