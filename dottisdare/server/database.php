@@ -5,8 +5,9 @@ class Clue
 {
 	private $clueId;
 	private $clueDescription;
+	private $location;
 	
-	public function __construct($clueId, $clueDescription)
+	public function __construct($id, $description, $location)
 	{
 		$this->clueId = $clueId;
 		$this->clueDescription = $clueDescription;
@@ -20,6 +21,11 @@ class Clue
 	public function getDescription()
 	{
 		return $this->clueDescription;
+	}
+	
+	public function getLocation()
+	{
+		return $this->location;
 	}
 }
 
@@ -207,6 +213,11 @@ class Database
 		return $exists;
 	}
 
+	/**
+	 * Returns the number of clues.
+	 * @param $troopId the troop's id.
+	 * @return the count of the number of clues.
+	 */
 	private static function getClueCount($troopId)
 	{
 		if (!self::connect())
@@ -225,9 +236,10 @@ class Database
 	}
 	
 	/**
-	 * Gets all clues for the specified troop id.
+	 * Gets all clues for the specified troop id. The clues are returned in the timeline order set
+	 * by the team.
 	 * @param $troopId the id of the troop to return the clues for.
-	 * @return a map of all clues for the specified troop. key: clue id; value: timeline number.
+	 * @return a map of all clues for the specified troop. key: clue id; value: Clue object.
 	 */
 	public static function getClues($troopId)
 	{
@@ -242,7 +254,7 @@ class Database
 		}
 		$db = self::$db;
 		
-		$sql = 'SELECT clue.id, clue.description
+		$sql = 'SELECT clue.id, clue.description, clue.location
 				FROM clue
 				inner join timeline
 				ON clue.id = timeline.clueId
@@ -260,8 +272,11 @@ class Database
 		{
 			$clueId = $result['id'];
 			$description = $result['description'];
+			$location = $result['location'];
+				
+			$clue = new Clue($clueId, $description, $location);
+			$clues[$clueId] = $clue;
 			
-			$clues[$clueId] = $description;
 			$result = $query->fetch();
 		}
 		$query->closeCursor();

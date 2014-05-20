@@ -15,12 +15,12 @@
 						
 						<ul id="sortable">
 							<?php 
-							foreach ($clues as $clue => $description)
+							foreach ($clues as $id => $clue)
 							{
 								echo 
-								'<li id="clue_' . $clue . '" class="ui-state-default small timeline"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-									Clue ' . $clue . '<br>' .
-									$description . '</li>';
+								'<li id="clue_' . $id . '" class="ui-state-default small timeline"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+									Clue ' . $id . '<br>' .
+									$clue->getDescription() . '</li>';
 							}
 							?>
 						</ul>
