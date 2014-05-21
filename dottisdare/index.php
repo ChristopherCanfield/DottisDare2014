@@ -5,8 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-    <meta name="viewport" content="width=device-width initial-scale=0.75">
+
     <meta name="description" content="Dotti's Dare Login Page" />
 	<meta name="author" content="Christopher D. Canfield" />
     
