@@ -2,7 +2,6 @@
  * 	dottisdare.css
  */
 
-
 h1.title {
 	width: 100%;
 	min-width: 450px;
@@ -119,7 +118,6 @@ footer {
 	margin-top: 40px;
 }
 
-
 /******************/
 /** Sign-in page **/
 /******************/
@@ -131,7 +129,6 @@ form.signinform {
 .signinform > button {
 	margin-left: 59px;
 }
-
 
 /****************/
 /** Rules page **/
@@ -151,7 +148,6 @@ h3.rules, h3.map {
 a.rules {
 	margin-top: 30px;
 }
-
 
 /********************/
 /** Clue codes **/
@@ -193,13 +189,16 @@ input.clue {
 	margin-bottom: 15px;
 }
 
-
 /**************/
 /** Map page **/
 /**************/
 
 div.map {
 	width: 1012px;
+}
+
+div.map-container {
+	min-width: 1200;
 }
 
 a.map {

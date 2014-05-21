@@ -30,10 +30,10 @@
     <![endif]-->
   </head>
   <body>
+    <div class="map-container centered">
 
 	<?php require('server/header.php');	?>
-
-    <div class="container">    	
+	
     	<h1 class="title">
     		Dotti's Dare 2014 Map &amp; Timeline
     	</h1>
