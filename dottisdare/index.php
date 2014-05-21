@@ -53,7 +53,8 @@
     </div> <!-- /container -->
     
     <footer>
-    	&copy; 2014 Christopher D. Canfield | Caitlin F. Canfield
+    	&copy; 2014 Christopher D. Canfield | Caitlin F. Canfield<br>
+    	Divergent Thoughts Games
     </footer>
 
     <!-- jQuery -->
