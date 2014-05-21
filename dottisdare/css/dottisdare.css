@@ -215,6 +215,14 @@ a.map {
 	border-color: #5FF39B;
 }
 
+/************/
+/** Header **/
+/***********/
+
+.navbar {
+	width: 100%;		
+}
+
 .navbar-dottisdare {
 	height: 38px;
 	color: #FFFFFF;
