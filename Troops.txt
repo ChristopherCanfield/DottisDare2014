@@ -1,0 +1,17 @@
+INSERT INTO `Troop`(`troopId`, `name`) VALUES 
+('tr7880','Troop 7880'),
+('TR71037','Troop 71037'),
+('TR7065','Troop 7065'),
+('TR7505','Troop 7505'),
+('TR9674','Troop 9674'),
+('TR77290','Troop 77290'),
+('TR82044','Troop 82044'),
+('TR7577','Troop 7577'),
+('TR7184','Troop 7184'),
+('TR7110','Troop 7110'),
+('TR9943','Troop 9943'),
+('TR97234','Troop 97234'),
+('TR7375','Troop 7375'),
+('TR5501','Troop 5501'),
+('TR7149','Troop 7149'),
+('TR553','Maryann & Flos');
