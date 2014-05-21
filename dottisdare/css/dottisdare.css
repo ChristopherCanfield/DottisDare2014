@@ -193,12 +193,12 @@ input.clue {
 /** Map page **/
 /**************/
 
-div.map {
-	width: 1012px;
+body.map {
+	min-width: 1045px;
 }
 
-div.map-container {
-	min-width: 1200;
+div.map {
+	width: 1012px;
 }
 
 a.map {
@@ -217,10 +217,6 @@ a.map {
 /************/
 /** Header **/
 /***********/
-
-.navbar {
-	width: 100%;		
-}
 
 .navbar-dottisdare {
 	height: 38px;

@@ -29,9 +29,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="map-container centered">
-
+  <body class="map">
 	<?php require('server/header.php');	?>
 	
     	<h1 class="title">
@@ -102,7 +100,6 @@
 		<div class="centered small" style="margin-top: 10px;">
 			Campground map &copy; 2014 Girl Scouts of Eastern Pennsylvania
 		</div>
-	</div>
     </div> <!-- /container -->
     
     <footer>
