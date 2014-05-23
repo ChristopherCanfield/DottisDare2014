@@ -52,24 +52,35 @@
   			
 	  		<ul>
 	      		<li>
-	      			A picture of your next event’s hiding spot will appear on a map of camp, in its approximate location. 
-	      			Tap the picture to enlarge it, and tap again to go back to the map screen.
+	      			On the next screen, you will see a map of camp with several different symbols, representing the approximate location of each clue. 
+	      			Tap on each symbol to see a picture of the clue location.
 				</li>
 	      		<li>
-	      			If you have Location Services enabled for your browser, 
-	      			you will get a message when you are getting close.
+	      			Once you have found a clue,  enter its 3-digit code under its picture and tap "Submit Clue Code."
 	      		</li>
 	      		<li>
-	      			Once you have found your event, tap the FOUND IT! button. 
-	      			You will then be asked to enter the three-digit code found on the event paper.
+	      			If you have entered the correct code, the text of the clue will appear, along with the button "Open Timeline." 
+	      			Tap that button to see your timeline of clues/events in Dotti's life.
 	      		</li>
 	      		<li>
-	      			When you have entered the code, you will be able to place your event on a timeline of Dotti’s life. 
-	      			When the timeline appears, simply tap the location where you think the event belongs. 
-	      			You will have the opportunity to move events around as you find more!
+	      			On the timeline screen, you can adjust the order of events by dragging them up or down.
 	      		</li>
 	      		<li>
-	      			If you need help at any time, tap the question mark in the bottom right-hand corner of the screen.
+	      			When you are happy with the order of your clues, click "Ok" and you will return to the map.
+	      		</li>
+	      		<li>
+	      			Once you have found all 12 event clues, a "Submit" button will appear on your timeline screen. 
+	      			When you are happy with the order of all of your events, click this button to submit your timeline!
+	      		</li>
+	      		<li>
+	      			You can view your timeline at any time by clicking the "Timeline" button above the map.
+	      		</li>
+	      		<li>
+	      			If you need help, tap the "Help" button in the upper-right corner of the screen. 
+	      			It will bring you back to this instruction screen.
+	      		</li>
+	      		<li>
+	      			You can also log out and log back in if necessary. Your progress will be saved.
 	      		</li>
 	      	</ul>
 	      	
