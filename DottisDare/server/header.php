@@ -3,7 +3,7 @@
         <div class="navbar-header">
           <span class="navbar-brand">Dotti's Dare 2014 | <?php echo $_GET['troopname']; ?></span>
        	</div>
-       	<span class="navbar-dottisdare">
+       	<div class="navbar-dottisdare">
 	       	<ul class="nav">
 	       		<li class="navbar-dottisdare"><a href="index.php" class="navbar-dottisdare">Log Out</a></li>
 	       		<?php
@@ -12,6 +12,6 @@
 		        		'&amp;troopname=' . rawurlencode($_GET['troopname']) . '" class="navbar-dottisdare">Help</a></li>';
 		       	?>          
 	        </ul>
-	   </span>
+	   </div>
       </div>
     </div>
