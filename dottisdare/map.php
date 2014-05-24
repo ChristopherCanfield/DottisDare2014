@@ -143,5 +143,6 @@
 	</script>
 	
 	<script src="js/Clue.js"></script>
+	<script src="js/Timeline.js"></script>
   </body>
 </html>

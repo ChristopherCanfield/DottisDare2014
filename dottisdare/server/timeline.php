@@ -1,5 +1,6 @@
 <?php
 	$clues = Database::getClues($_GET['troop']);
+	define(CLUE_COUNT, 12);
 ?>	
 		<div class="modal fade" id="timeline" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
@@ -31,6 +32,13 @@
 					</div>
 					
 					<div class="modal-footer">
+						<?php
+							if (count($clues) == CLUE_COUNT)
+							{
+								echo
+								'<button type="submit" class="btn btn-primary btn-lg dottisdare" onclick="">Submit</button>';
+							}
+						?>
 						<button type="submit" class="btn btn-primary btn-lg dottisdare" data-dismiss="modal">OK</button>
       				</div>
 				</div>

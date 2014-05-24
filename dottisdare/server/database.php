@@ -327,6 +327,57 @@ class Database
 		
 		return $description;
 	}
+	
+	/**
+	 * Sets whether the troop has submitted its timeline.
+	 * @param $troopId the troop's id.
+	 * @param $submitted true if the troop has submitted its timeline, or false if not.
+	 */
+	public static function setTimelineSubmitted($troopId, $submitted)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+
+		$sql = 'update Troop ' .
+				' set submitted=:submitted' .
+				' where troopId=:troopId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		$query->bindValue(':submitted', $submitted, PDO::PARAM_BOOL);
+		
+		$query->execute();
+	}
+	
+	/**
+	 * Gets whether the specified troop submitted its timeline.
+	 * @param $troopId the troop's id.
+	 * @return whether the specified troop has submitted its timeline.
+	 */
+	public static function getTimelineSubmitted($troopId)
+	{
+		if (!self::connect())
+		{
+			throw new Exception('Unable to connect to database');
+		}
+		$db = self::$db;
+		
+		$sql = 'select Troop.submitted' 
+			. ' from Troop'
+			. ' where Troop.troopId = :troopId;';
+		
+		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
+		$query->execute();
+		
+		$result = $query->fetch();
+		$query->closeCursor();
+		
+		return $result;
+	}
 }
 
 ?>
