@@ -35,8 +35,12 @@
 						<?php
 							if (count($clues) == CLUE_COUNT)
 							{
+								$submit = Database::getTimelineSubmitted($troopId);
+								$submitButtonText = ($submit == true) ? 'Submit' : 'Unsubmit';
+								
 								echo
-								'<button type="submit" class="btn btn-primary btn-lg dottisdare" onclick="">Submit</button>';
+								'<button type="submit" id="submitTimeline" class="btn btn-primary btn-lg dottisdare" 
+									onclick="submitTimeline("' . $troop . '", ' . $submit . ')">'. $submitButtonText . '</button>';
 							}
 						?>
 						<button type="submit" class="btn btn-primary btn-lg dottisdare" data-dismiss="modal">OK</button>

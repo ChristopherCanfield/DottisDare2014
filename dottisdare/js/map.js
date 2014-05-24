@@ -1,7 +1,23 @@
 /**
- * ValidateClue.js
+ * map.js
+ * Functionality used by the map page.
  * @author Christopher D. Canfield
  */
+
+/**
+ * Submits or unsubmits the timeline.
+ */
+var submitTimeline = function(troopId, submit) {
+	var buttonText = (submit === true) ? "Unsubmit" : "Submit";
+	$("#submitTimeline").html(buttonText);
+	$("#submitTimeline").submit(function() {
+		submitTimeline(troopId, !submit);
+	});
+	
+	$.post("server/submit_timeline.php",
+			{troop: troopId, submittimeline: submit}
+		);
+};
 
 /**
  * Updates the form to reflect a correct clue code.
