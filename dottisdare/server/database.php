@@ -228,9 +228,10 @@ class Database
 		}
 		$db = self::$db;
 		
-		$sql = 'select count(*) from Timeline;';
+		$sql = 'select count(*) from Timeline where Timeline.troopId = :troopId;';
 		
 		$query = $db->prepare($sql);
+		$query->bindValue(':troopId', $troopId, PDO::PARAM_STR);
 		$query->execute();
 		
 		$result = $query->fetch(PDO::FETCH_NUM);

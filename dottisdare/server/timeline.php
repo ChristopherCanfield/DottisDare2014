@@ -21,7 +21,7 @@
 								echo 
 								'<li id="clue_' . $id . '" class="ui-state-default small timeline"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
 									Clue ' . $id . '<br>' .
-									$clue->getDescription() . '</li>';
+									htmlspecialchars($clue->getDescription()) . '</li>';
 							}
 							?>
 						</ul>

@@ -46,7 +46,7 @@
         
 			echo 
 			'<span id="troop" troop="' . $troop . '"></span>
-			<h3 class="map">' . $troopName . '</h3>
+			<h3 class="map">' . htmlspecialchars($troopName) . '</h3>
 			
 			<div class="centered">
 				<a class="btn btn-lg btn-primary dottisdare map" href="map.php?troop=' . rawurlencode($troop) .

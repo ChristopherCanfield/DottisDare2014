@@ -41,7 +41,7 @@
   		<div class="rules dottisdare">
   			<?php 	
 				echo '<h3 class="rules">';
-				echo 'Welcome ' . $_GET['troopname'] . '!';
+				echo 'Welcome ' . htmlspecialchars($_GET['troopname']) . '!';
 				echo '</h3>';
 			?>
   			

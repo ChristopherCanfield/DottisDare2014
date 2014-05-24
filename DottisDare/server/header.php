@@ -1,7 +1,7 @@
     <div class="navbar navbar-dottisdare" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <span class="navbar-brand">Dotti's Dare 2014 | <?php echo $_GET['troopname']; ?></span>
+          <span class="navbar-brand">Dotti's Dare 2014 | <?php echo htmlspecialchars($_GET['troopname']); ?></span>
        	</div>
        	<div class="navbar-dottisdare">
 	       	<ul class="nav">
