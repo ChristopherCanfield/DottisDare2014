@@ -53,10 +53,10 @@
 	  		<ul>
 	      		<li>
 	      			On the next screen, you will see a map of camp with several different symbols, representing the approximate location of each clue. 
-	      			Tap on each symbol to see a picture of the clue location.
+	      			Tap on a symbol to see a picture of the clue location.
 				</li>
 	      		<li>
-	      			Once you have found a clue,  enter its 3-digit code under its picture and tap "Submit Clue Code."
+	      			Once you have found a clue, enter its 3-digit code under its picture and tap "Submit Clue Code."
 	      		</li>
 	      		<li>
 	      			If you have entered the correct code, the text of the clue will appear, along with the button "Open Timeline." 
@@ -76,8 +76,7 @@
 	      			You can view your timeline at any time by clicking the "Timeline" button above the map.
 	      		</li>
 	      		<li>
-	      			If you need help, tap the "Help" button in the upper-right corner of the screen. 
-	      			It will bring you back to this instruction screen.
+	      			Tap the "Help" button in the upper-right corner of the screen to return to this instruction screen.
 	      		</li>
 	      		<li>
 	      			You can also log out and log back in if necessary. Your progress will be saved.
