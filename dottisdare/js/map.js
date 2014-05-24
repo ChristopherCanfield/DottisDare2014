@@ -8,14 +8,28 @@
  * Submits or unsubmits the timeline.
  */
 var submitTimeline = function(troopId, submit) {
-	var buttonText = (submit === true) ? "Unsubmit" : "Submit";
+	var buttonText = (submit == true) ? "Unsubmit" : "Submit";
 	$("#submitTimeline").html(buttonText);
-	$("#submitTimeline").submit(function() {
-		submitTimeline(troopId, !submit);
+	$("#submitTimeline").attr("onclick", "").off("click");
+	
+	if (submit == null || submit == "" || submit == "0")
+	{
+		nextSubmit = "1";
+	}
+	else
+	{
+		nextSubmit = "0";
+	}
+	$("#submitTimeline").click(function() {
+		submitTimeline(troopId, nextSubmit);
 	});
 	
+	var successText = (submit == true) ? '<div class="centered" style="color:#267F00;">Timeline Submitted!</div>' :
+			'<div class="centered" style="color:#267F00;">Timeline Unsubmitted</div>';
 	$.post("server/submit_timeline.php",
-			{troop: troopId, submittimeline: submit}
+			{troop: troopId, submittimeline: submit}).done(function(data) {
+				$("#timeline-footer").append(successText);
+			}
 		);
 };
 

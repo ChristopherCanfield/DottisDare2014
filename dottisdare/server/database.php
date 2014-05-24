@@ -376,7 +376,11 @@ class Database
 		$result = $query->fetch();
 		$query->closeCursor();
 		
-		return $result;
+		if ($result['submitted'] == false)
+		{
+			return false;
+		}
+		return true;
 	}
 }
 

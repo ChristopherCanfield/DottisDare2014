@@ -1,6 +1,6 @@
 <?php
 	$clues = Database::getClues($_GET['troop']);
-	define(CLUE_COUNT, 12);
+	define('CLUE_COUNT', 12);
 ?>	
 		<div class="modal fade" id="timeline" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
@@ -31,16 +31,16 @@
 						</ul>
 					</div>
 					
-					<div class="modal-footer">
+					<div id="timeline-footer" class="modal-footer">
 						<?php
 							if (count($clues) == CLUE_COUNT)
 							{
-								$submit = Database::getTimelineSubmitted($troopId);
-								$submitButtonText = ($submit == true) ? 'Submit' : 'Unsubmit';
+								$submit = Database::getTimelineSubmitted($_GET['troop']);
+								$submitButtonText = ($submit == false) ? 'Submit' : 'Unsubmit';
 								
 								echo
 								'<button type="submit" id="submitTimeline" class="btn btn-primary btn-lg dottisdare" 
-									onclick="submitTimeline("' . $troop . '", ' . $submit . ')">'. $submitButtonText . '</button>';
+									onclick="submitTimeline(\'' . $troop . '\', \'' . !$submit . '\')">'. $submitButtonText . '</button>';
 							}
 						?>
 						<button type="submit" class="btn btn-primary btn-lg dottisdare" data-dismiss="modal">OK</button>
