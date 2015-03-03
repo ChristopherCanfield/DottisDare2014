@@ -64,8 +64,8 @@ class Database
 		}
 		
 		$username = 'qgtlbkzc_troop';
-		// Note: Update to correct password when moving to production.
-		$password = 'sIeRFCj97ttkbGS';
+		// Note: Replace with password when moving to production.
+		$password = '';
 		$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 		
 		try {
